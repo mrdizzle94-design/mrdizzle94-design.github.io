@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nathan Knott — Applied AI &amp; Solutions Architect</title>
+<meta name="description" content="Nathan Knott — applied AI and software solutions architect. Multi-agent systems, full-stack platforms and logistics automation. Contact: Nathan.knott@yahoo.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,300..700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#F3F3F4}
+a{color:#121720;text-decoration:none}a:hover{color:#000000}
+::selection{background:#375C95;color:#F3F3F4}
+.nk *{box-sizing:border-box}
+.serif{font-family:'Google Sans','Product Sans','Google Sans Flex',system-ui,sans-serif;font-weight:500;letter-spacing:-0.03em}
+.mono{font-family:'Google Sans Code',ui-monospace,monospace}
+
+/* load-in: the name rises out of its own baseline */
+.mask{display:block;overflow:hidden;padding-bottom:0.08em}
+.mask > span{display:block;animation:lift 1.3s cubic-bezier(.19,1,.22,1) both}
+.d1{animation-delay:.15s!important}.d2{animation-delay:.3s!important}.d3{animation-delay:.45s!important}.d4{animation-delay:.7s!important}.d5{animation-delay:.9s!important}
+@keyframes lift{from{transform:translateY(105%)}to{transform:none}}
+.fade{animation:fade 1.4s cubic-bezier(.19,1,.22,1) both}
+@keyframes fade{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.rule-in{transform-origin:left;animation:draw 1.6s cubic-bezier(.19,1,.22,1) .5s both}
+@keyframes draw{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+
+/* scroll-linked reveals: content arrives as you reach it */
+@supports (animation-timeline: view()){
+  .rv{animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 45%}
+  .rv-l{animation:slide linear both;animation-timeline:view();animation-range:entry 5% entry 55%}
+  .grow{transform-origin:left;animation:draw linear both;animation-timeline:view();animation-range:entry 20% cover 45%}
+  .line{animation:type linear both;animation-timeline:view();animation-range:entry 30% cover 40%}
+  .line:nth-child(2){animation-range:entry 45% cover 45%}
+  .line:nth-child(3){animation-range:entry 60% cover 50%}
+  .line:nth-child(4){animation-range:entry 75% cover 55%}
+  .progress{animation:draw linear both;animation-timeline:scroll(root)}
+  .drift{animation:drift linear both;animation-timeline:view();animation-range:cover 0% cover 100%}
+}
+@keyframes rise{from{opacity:0;transform:translateY(48px)}to{opacity:1;transform:none}}
+@keyframes slide{from{opacity:0;transform:translateX(-28px)}to{opacity:1;transform:none}}
+@keyframes type{from{opacity:0;clip-path:inset(0 100% 0 0)}to{opacity:1;clip-path:inset(0 0 0 0)}}
+@keyframes drift{from{transform:translateX(0)}to{transform:translateX(-18%)}}
+
+/* hover states */
+.navlink{position:relative;color:#575C65;transition:color .4s ease}
+.navlink::after{content:'';position:absolute;left:0;right:0;bottom:-6px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .6s cubic-bezier(.19,1,.22,1)}
+.navlink:hover{color:#121720}.navlink:hover::after{transform:scaleX(1);transform-origin:left}
+.btn{transition:background .5s cubic-bezier(.19,1,.22,1),color .5s,border-color .5s,transform .5s cubic-bezier(.19,1,.22,1)}
+.btn:hover{transform:translateY(-2px)}
+.btn-solid:hover{background:#000000!important;color:#F3F3F4!important}
+.btn-ghost:hover{border-color:var(--accent)!important;color:#000000!important}
+.arrow{display:inline-block;transition:transform .6s cubic-bezier(.19,1,.22,1)}
+.btn:hover .arrow,.case:hover .arrow,.mail:hover .arrow{transform:translateX(6px)}
+.case{transition:background .8s cubic-bezier(.19,1,.22,1)}
+.case:hover{background:#EDEDEF}
+.case .ix{transition:color .6s ease}
+.case:hover .ix{color:var(--accent)!important}
+.pillar{transition:border-color .6s ease,transform .8s cubic-bezier(.19,1,.22,1)}
+.pillar:hover{border-color:#C5C7CC!important;transform:translateY(-4px)}
+.skill{transition:opacity .7s cubic-bezier(.19,1,.22,1),transform .7s cubic-bezier(.19,1,.22,1),filter .7s ease,border-color .5s ease}
+.skill.off{opacity:.16;transform:scale(.97);filter:grayscale(1)}
+.skill.on:hover{border-color:var(--accent)!important}
+.chip{transition:background .5s cubic-bezier(.19,1,.22,1),color .5s,border-color .5s}
+.chip:hover{border-color:#9498A0!important;color:#121720!important}
+.mail{background-image:linear-gradient(currentColor,currentColor);background-size:0% 1px;background-repeat:no-repeat;background-position:0 100%;transition:background-size .9s cubic-bezier(.19,1,.22,1),color .5s}
+.mail:hover{background-size:100% 1px;color:var(--accent)!important}
+.role{transition:padding-left .7s cubic-bezier(.19,1,.22,1)}
+.role:hover{padding-left:12px!important}
+.dot{animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.copied{animation:fade .6s cubic-bezier(.19,1,.22,1) both}
+
+.still *,.still *::before,.still *::after{animation:none!important;transition:none!important}
+@media (prefers-reduced-motion: reduce){.nk *,.nk *::before,.nk *::after{animation:none!important;transition-duration:.01ms!important}html{scroll-behavior:auto}}
+@media (max-width: 720px){.hide-sm{display:none!important}}
+.chip{font-family:inherit;font-size:14px;padding:12px 20px;min-height:44px;border-radius:999px;cursor:pointer;border:1px solid #C5C7CC;background:transparent;color:#575C65}
+.chip.sel,.chip.sel:hover{border-color:#121720!important;background:#121720;color:#F3F3F4!important}
+</style>
+</head>
+<body>
+<div class="nk" style="--accent: #375C95; background: #F3F3F4; color: #121720; font-family: 'Google Sans','Product Sans','Google Sans Flex', system-ui, sans-serif; font-weight: 400; min-height: 100vh; overflow-x: clip">
+
+  <!-- scroll progress -->
+  <div class="progress" style="position: fixed; top: 0; left: 0; right: 0; height: 2px; background: var(--accent); z-index: 60; transform-origin: left"></div>
+
+  <!-- NAV -->
+  <header style="position: sticky; top: 0; z-index: 50; background: rgba(243,243,244,0.78); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); border-bottom: 1px solid #E1E2E5">
+    <nav aria-label="Primary" style="max-width: 1320px; margin: 0 auto; padding: 18px clamp(16px, 4vw, 48px); display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap">
+      <a href="#top" style="display: flex; align-items: baseline; gap: 12px">
+        <span class="serif" style="font-size: 26px; letter-spacing: -0.01em">Nathan Knott</span>
+        <span class="mono hide-sm" style="font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #757981">Solutions Architect</span>
+      </a>
+      <div style="display: flex; align-items: center; gap: clamp(18px, 3vw, 40px); font-size: 14px; flex-wrap: wrap">
+        <a class="navlink hide-sm" href="#approach">Approach</a>
+        <a class="navlink hide-sm" href="#work">Work</a>
+        <a class="navlink hide-sm" href="#capabilities">Capabilities</a>
+        <a class="navlink hide-sm" href="#experience">Experience</a>
+        <a class="btn btn-ghost" href="#contact" style="padding: 11px 20px; border: 1px solid #C5C7CC; border-radius: 999px; color: #121720; min-height: 44px; display: inline-flex; align-items: center">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="top" style="max-width: 1320px; margin: 0 auto; padding: clamp(72px, 12vw, 168px) clamp(16px, 4vw, 48px) clamp(64px, 9vw, 120px)">
+    <div class="fade d1 mono" style="display: flex; align-items: center; gap: 12px; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #575C65; margin-bottom: 48px">
+      <span class="dot" style="width: 7px; height: 7px; border-radius: 50%; background: var(--accent)"></span>
+      <span>Open to AI engineering &amp; solutions architecture roles</span>
+    </div>
+
+    <h1 class="serif" style="margin: 0; font-size: clamp(64px, 13.5vw, 212px); line-height: 0.9; letter-spacing: -0.035em">
+      <span class="mask"><span class="d1">Nathan</span></span>
+      <span class="mask"><span class="d2" style="font-weight: 300; color: var(--accent); padding-left: clamp(0px, 8vw, 140px)">Knott</span></span>
+    </h1>
+
+    <div class="rule-in" style="height: 1px; background: #D5D6DA; margin: clamp(40px, 6vw, 72px) 0 40px"></div>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 40px 64px; justify-content: space-between; align-items: flex-end">
+      <p class="fade d4" style="margin: 0; flex: 1 1 520px; max-width: 640px; font-size: clamp(19px, 1.7vw, 24px); line-height: 1.5; color: #363B45">
+        Applied AI &amp; software solutions architect. I turn supply-chain operations, manual data pipelines and workflow bottlenecks into <span class="serif" style="font-weight: 300; font-size: 1.15em; color: #121720">autonomous multi-agent systems</span> and production-grade web applications.
+      </p>
+      <div class="fade d5" style="display: flex; flex-wrap: wrap; gap: 12px">
+        <a class="btn btn-solid" href="#work" style="background: #121720; color: #F3F3F4; padding: 16px 28px; border-radius: 999px; font-weight: 500; font-size: 15px; min-height: 52px; display: inline-flex; align-items: center; gap: 10px">Selected work <span class="arrow">→</span></a>
+        <a class="btn btn-ghost" href="mailto:Nathan.knott@yahoo.com" style="border: 1px solid #C5C7CC; color: #121720; padding: 16px 28px; border-radius: 999px; font-size: 15px; min-height: 52px; display: inline-flex; align-items: center">Nathan.knott@yahoo.com</a>
+      </div>
+    </div>
+
+    <div class="fade d5 mono" style="margin-top: 56px; display: flex; flex-wrap: wrap; gap: 12px 40px; font-size: 12px; letter-spacing: 0.08em; color: #757981; text-transform: uppercase">
+      <span>Mesa, Arizona</span>
+      <span>Remote / Hybrid</span>
+      <span>Arizona State University, BS</span>
+    </div>
+  </section>
+
+  <!-- DISCIPLINES BAND -->
+  <div aria-hidden="true" style="border-top: 1px solid #E1E2E5; border-bottom: 1px solid #E1E2E5; overflow: hidden; padding: 28px 0">
+    <div class="drift serif" style="white-space: nowrap; font-size: clamp(36px, 5vw, 72px); color: #C5C7CC; letter-spacing: -0.01em">
+      Multi-agent orchestration <span style="color: var(--accent)">·</span> Full-stack systems <span style="color: var(--accent)">·</span> Logistics automation <span style="color: var(--accent)">·</span> Data pipelines <span style="color: var(--accent)">·</span> Multi-agent orchestration <span style="color: var(--accent)">·</span> Full-stack systems
+    </div>
+  </div>
+
+  <!-- APPROACH -->
+  <section id="approach" style="max-width: 1320px; margin: 0 auto; padding: clamp(88px, 11vw, 160px) clamp(16px, 4vw, 48px)">
+    <div style="display: flex; flex-wrap: wrap; gap: 32px 80px; margin-bottom: 72px">
+      <div class="rv mono" style="flex: 0 0 200px; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent)">01 — Approach</div>
+      <h2 class="rv serif" style="flex: 1 1 560px; margin: 0; font-size: clamp(40px, 5.2vw, 76px); line-height: 1.02; letter-spacing: -0.02em">Past superficial prompts — toward <span style="font-weight: 300">verifiable</span>, deterministic systems that remove real business friction.</h2>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px">
+      <article class="pillar rv" style="border: 1px solid #DDDEE1; border-radius: 4px; padding: 40px 36px 44px; display: flex; flex-direction: column; gap: 20px">
+        <span class="mono" style="font-size: 12px; color: #757981">i.</span>
+        <h3 class="serif" style="margin: 0; font-size: 32px; line-height: 1.1">Autonomous multi-agent systems</h3>
+        <p style="margin: 0; font-size: 16px; line-height: 1.65; color: #575C65">Deconstructing multi-layered manual jobs into coordinated agent networks with deterministic tool validation, self-correction and human-in-the-loop fallback.</p>
+        <span class="mono" style="margin-top: auto; padding-top: 12px; font-size: 12px; letter-spacing: 0.06em; color: #363B45">Orchestration &amp; verification</span>
+      </article>
+      <article class="pillar rv" style="border: 1px solid #DDDEE1; border-radius: 4px; padding: 40px 36px 44px; display: flex; flex-direction: column; gap: 20px">
+        <span class="mono" style="font-size: 12px; color: #757981">ii.</span>
+        <h3 class="serif" style="margin: 0; font-size: 32px; line-height: 1.1">High-reliability full-stack core</h3>
+        <p style="margin: 0; font-size: 16px; line-height: 1.65; color: #575C65">Next.js, TypeScript and Supabase with row-level security and responsive, reactive interfaces. Built for uptime, clean audit trails and zero lag.</p>
+        <span class="mono" style="margin-top: auto; padding-top: 12px; font-size: 12px; letter-spacing: 0.06em; color: #363B45">Enterprise React + Supabase</span>
+      </article>
+      <article class="pillar rv" style="border: 1px solid #DDDEE1; border-radius: 4px; padding: 40px 36px 44px; display: flex; flex-direction: column; gap: 20px">
+        <span class="mono" style="font-size: 12px; color: #757981">iii.</span>
+        <h3 class="serif" style="margin: 0; font-size: 32px; line-height: 1.1">Data pipelines &amp; logistics automation</h3>
+        <p style="margin: 0; font-size: 16px; line-height: 1.65; color: #575C65">Real-world operations experience at Target ICQA and Mito Red Light, applied to eliminating shipping discrepancies, stockouts and manual tracking spreadsheets.</p>
+        <span class="mono" style="margin-top: auto; padding-top: 12px; font-size: 12px; letter-spacing: 0.06em; color: #363B45">Rooted in supply chain</span>
+      </article>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section id="work" style="border-top: 1px solid #E1E2E5">
+    <div style="max-width: 1320px; margin: 0 auto; padding: clamp(88px, 11vw, 160px) clamp(16px, 4vw, 48px) 40px; display: flex; flex-wrap: wrap; gap: 32px 80px">
+      <div class="rv mono" style="flex: 0 0 200px; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent)">02 — Selected work</div>
+      <h2 class="rv serif" style="flex: 1 1 560px; margin: 0; font-size: clamp(40px, 5.2vw, 76px); line-height: 1.02; letter-spacing: -0.02em">Platforms that replace busywork with <span style="font-weight: 300">resilient</span> software.</h2>
+    </div>
+
+    <!-- Case 1 -->
+    <article class="case" style="border-top: 1px solid #E1E2E5">
+      <div style="max-width: 1320px; margin: 0 auto; padding: clamp(56px, 7vw, 96px) clamp(16px, 4vw, 48px); display: flex; flex-wrap: wrap; gap: 48px 80px">
+        <div style="flex: 1 1 560px; min-width: 0">
+          <div class="rv-l" style="display: flex; align-items: baseline; gap: 24px; margin-bottom: 28px">
+            <span class="ix serif" style="font-size: 64px; line-height: 1; color: #C5C7CC; font-weight: 300">01</span>
+            <span class="mono" style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #757981">Production platform · Next.js · Supabase · Freight APIs</span>
+          </div>
+          <h3 class="rv serif" style="margin: 0 0 24px; font-size: clamp(34px, 3.6vw, 52px); line-height: 1.05; letter-spacing: -0.015em">Mito Logistics Portal &amp; autonomous AI agents</h3>
+          <p class="rv" style="margin: 0 0 40px; font-size: 17px; line-height: 1.7; color: #575C65; max-width: 620px">An end-to-end supply-chain portal paired with multi-agent tracking bots. It consumes carrier feeds, predicts transit-delay exceptions through LLM parsing, reconciles international shipping documents and surfaces live inventory telemetry for leadership.</p>
+          <div class="rv" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; border-top: 1px solid #DDDEE1; padding-top: 28px">
+            <div><div class="serif" style="font-size: clamp(36px, 3.4vw, 52px); line-height: 1; color: var(--accent)">85%</div><div class="mono" style="margin-top: 10px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #757981">Less manual entry</div></div>
+            <div><div class="serif" style="font-size: clamp(36px, 3.4vw, 52px); line-height: 1">Live</div><div class="mono" style="margin-top: 10px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #757981">Exception detection</div></div>
+            <div><div class="serif" style="font-size: clamp(36px, 3.4vw, 52px); line-height: 1">100%</div><div class="mono" style="margin-top: 10px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #757981">Carrier visibility</div></div>
+          </div>
+        </div>
+        <div class="rv" style="flex: 1 1 380px; min-width: 0; align-self: center; background: #EDEDEF; border: 1px solid #DDDEE1; border-radius: 4px; padding: 28px">
+          <div class="mono" style="display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: #757981; padding-bottom: 18px; border-bottom: 1px solid #DDDEE1; margin-bottom: 18px">
+            <span>agent_event_stream.log</span>
+            <span class="dot" style="width: 7px; height: 7px; border-radius: 50%; background: var(--accent)"></span>
+          </div>
+          <div class="mono" style="display: flex; flex-direction: column; gap: 12px; font-size: 13px; line-height: 1.5; color: #363B45">
+            <div class="line"><span style="color: #9498A0">08:24:11</span>  Ingesting bill of lading #BOL-99214</div>
+            <div class="line"><span style="color: #9498A0">08:24:12</span>  Customs clearance delay parsed</div>
+            <div class="line"><span style="color: #9498A0">08:24:13</span>  <span style="color: var(--accent)">ETA recomputed: +36h</span></div>
+            <div class="line"><span style="color: #9498A0">08:24:14</span>  Vendor alert &amp; mitigation ticket sent</div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Case 2 -->
+    <article class="case" style="border-top: 1px solid #E1E2E5">
+      <div style="max-width: 1320px; margin: 0 auto; padding: clamp(56px, 7vw, 96px) clamp(16px, 4vw, 48px); display: flex; flex-wrap: wrap; gap: 48px 80px">
+        <div style="flex: 1 1 560px; min-width: 0">
+          <div class="rv-l" style="display: flex; align-items: baseline; gap: 24px; margin-bottom: 28px">
+            <span class="ix serif" style="font-size: 64px; line-height: 1; color: #C5C7CC; font-weight: 300">02</span>
+            <span class="mono" style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #757981">Fintech platform · Next.js · Plaid · Claude API</span>
+          </div>
+          <h3 class="rv serif" style="margin: 0 0 24px; font-size: clamp(34px, 3.6vw, 52px); line-height: 1.05; letter-spacing: -0.015em">VeloFlow personal finance engine</h3>
+          <p class="rv" style="margin: 0 0 40px; font-size: 17px; line-height: 1.7; color: #575C65; max-width: 620px">A high-precision personal finance command centre aggregating multi-bank transactions through Plaid. AI auto-categorises irregular spending, analyses recurring burn and projects 90-day cash-flow health from incoming receivables and variable outlays.</p>
+          <div class="rv" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; border-top: 1px solid #DDDEE1; padding-top: 28px">
+            <div><div class="serif" style="font-size: clamp(36px, 3.4vw, 52px); line-height: 1; color: var(--accent)">90-day</div><div class="mono" style="margin-top: 10px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #757981">Cash runway forecast</div></div>
+            <div><div class="serif" style="font-size: clamp(36px, 3.4vw, 52px); line-height: 1">Plaid</div><div class="mono" style="margin-top: 10px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #757981">Multi-bank linking</div></div>
+            <div><div class="serif" style="font-size: clamp(36px, 3.4vw, 52px); line-height: 1">&lt;100ms</div><div class="mono" style="margin-top: 10px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #757981">Cached aggregation</div></div>
+          </div>
+        </div>
+        <div class="rv" style="flex: 1 1 380px; min-width: 0; align-self: center; background: #EDEDEF; border: 1px solid #DDDEE1; border-radius: 4px; padding: 28px">
+          <div class="mono" style="display: flex; justify-content: space-between; font-size: 12px; color: #757981; padding-bottom: 18px; border-bottom: 1px solid #DDDEE1; margin-bottom: 24px">
+            <span>Runway forecast</span>
+            <span style="color: var(--accent)">+18.4% health</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 22px">
+            <div>
+              <div class="mono" style="display: flex; justify-content: space-between; font-size: 12px; color: #575C65; margin-bottom: 10px"><span>Operating buffer</span><span>$28,450 / 90d</span></div>
+              <div style="height: 3px; background: #DDDEE1"><div class="grow" style="height: 3px; width: 76%; background: var(--accent)"></div></div>
+            </div>
+            <div>
+              <div class="mono" style="display: flex; justify-content: space-between; font-size: 12px; color: #575C65; margin-bottom: 10px"><span>Discretionary target</span><span>−12%</span></div>
+              <div style="height: 3px; background: #DDDEE1"><div class="grow" style="height: 3px; width: 64%; background: #121720"></div></div>
+            </div>
+            <p class="serif" style="margin: 6px 0 0; font-size: 20px; line-height: 1.4; font-weight: 300; color: #363B45">“3 dormant subscriptions flagged — $140/mo in recurring savings identified.”</p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Case 3 -->
+    <article class="case" style="border-top: 1px solid #E1E2E5; border-bottom: 1px solid #E1E2E5">
+      <div style="max-width: 1320px; margin: 0 auto; padding: clamp(56px, 7vw, 96px) clamp(16px, 4vw, 48px); display: flex; flex-wrap: wrap; gap: 48px 80px">
+        <div style="flex: 1 1 560px; min-width: 0">
+          <div class="rv-l" style="display: flex; align-items: baseline; gap: 24px; margin-bottom: 28px">
+            <span class="ix serif" style="font-size: 64px; line-height: 1; color: #C5C7CC; font-weight: 300">03</span>
+            <span class="mono" style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #757981">Autonomous workflows · Claude Code · Supabase</span>
+          </div>
+          <h3 class="rv serif" style="margin: 0 0 24px; font-size: clamp(34px, 3.6vw, 52px); line-height: 1.05; letter-spacing: -0.015em">Autonomous multi-agent marketing engine</h3>
+          <p class="rv" style="margin: 0 0 40px; font-size: 17px; line-height: 1.7; color: #575C65; max-width: 620px">A self-executing content-intelligence pipeline of specialised agents: a research scout reads competitor positioning, a copy architect drafts targeted variants and an evaluation agent checks every output against brand guardrails before anything publishes.</p>
+          <div class="rv" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; border-top: 1px solid #DDDEE1; padding-top: 28px">
+            <div><div class="serif" style="font-size: clamp(36px, 3.4vw, 52px); line-height: 1; color: var(--accent)">4×</div><div class="mono" style="margin-top: 10px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #757981">Production velocity</div></div>
+            <div><div class="serif" style="font-size: clamp(36px, 3.4vw, 52px); line-height: 1">0</div><div class="mono" style="margin-top: 10px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #757981">Unchecked hallucinations</div></div>
+            <div><div class="serif" style="font-size: clamp(36px, 3.4vw, 52px); line-height: 1">Auto</div><div class="mono" style="margin-top: 10px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #757981">Tone validation</div></div>
+          </div>
+        </div>
+        <div class="rv" style="flex: 1 1 380px; min-width: 0; align-self: center; display: flex; flex-direction: column">
+          <div class="mono" style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #757981; margin-bottom: 20px">Orchestration topology</div>
+          <div class="rv-l" style="display: flex; gap: 20px; padding: 20px 0; border-top: 1px solid #DDDEE1">
+            <span class="serif" style="font-size: 24px; font-weight: 300; color: var(--accent); width: 28px">1</span>
+            <div><div style="font-size: 16px; font-weight: 500">Trend &amp; competitor scout</div><div style="font-size: 14px; color: #757981; margin-top: 4px">Scrapes market deltas &amp; search intent</div></div>
+          </div>
+          <div class="rv-l" style="display: flex; gap: 20px; padding: 20px 0; border-top: 1px solid #DDDEE1">
+            <span class="serif" style="font-size: 24px; font-weight: 300; color: var(--accent); width: 28px">2</span>
+            <div><div style="font-size: 16px; font-weight: 500">Content synthesiser</div><div style="font-size: 14px; color: #757981; margin-top: 4px">Generates tailored campaign briefs</div></div>
+          </div>
+          <div class="rv-l" style="display: flex; gap: 20px; padding: 20px 0; border-top: 1px solid #DDDEE1; border-bottom: 1px solid #DDDEE1">
+            <span class="serif" style="font-size: 24px; font-weight: 300; color: var(--accent); width: 28px">3</span>
+            <div><div style="font-size: 16px; font-weight: 500">Quality &amp; safety gatekeeper</div><div style="font-size: 14px; color: #757981; margin-top: 4px">Validates compliance, tone &amp; citations</div></div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- CAPABILITIES -->
+  <section id="capabilities" style="max-width: 1320px; margin: 0 auto; padding: clamp(88px, 11vw, 160px) clamp(16px, 4vw, 48px)">
+    <div style="display: flex; flex-wrap: wrap; gap: 32px 80px; margin-bottom: 56px">
+      <div class="rv mono" style="flex: 0 0 200px; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent)">03 — Capabilities</div>
+      <div style="flex: 1 1 560px">
+        <h2 class="rv serif" style="margin: 0 0 36px; font-size: clamp(40px, 5.2vw, 76px); line-height: 1.02; letter-spacing: -0.02em">The <span style="font-weight: 300">toolkit</span>.</h2>
+        <div class="rv" role="group" aria-label="Filter capabilities" style="display: flex; flex-wrap: wrap; gap: 10px">
+                      <button type="button" class="chip sel" data-filter="all" aria-pressed="true">Everything</button>
+            <button type="button" class="chip" data-filter="ai" aria-pressed="false">Applied AI &amp; agents</button>
+            <button type="button" class="chip" data-filter="software" aria-pressed="false">Software &amp; architecture</button>
+            <button type="button" class="chip" data-filter="operations" aria-pressed="false">Operations &amp; supply chain</button>
+        </div>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1px; background: #DDDEE1; border: 1px solid #DDDEE1">
+      <div class="skill on" data-cat="ai" style="background: #F3F3F4; padding: 32px 28px 36px; border: 1px solid transparent; display: flex; flex-direction: column; gap: 14px; min-height: 200px">
+          <span class="mono" style="font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent)">Autonomous agents</span>
+          <span class="serif" style="font-size: 28px; line-height: 1.1">Multi-agent systems</span>
+          <span style="font-size: 14px; line-height: 1.6; color: #757981; margin-top: auto">LangChain, LangGraph, custom tool-execution loops</span>
+        </div>
+      
+        <div class="skill on" data-cat="ai" style="background: #F3F3F4; padding: 32px 28px 36px; border: 1px solid transparent; display: flex; flex-direction: column; gap: 14px; min-height: 200px">
+          <span class="mono" style="font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent)">LLM development</span>
+          <span class="serif" style="font-size: 28px; line-height: 1.1">Claude Code &amp; CLI</span>
+          <span style="font-size: 14px; line-height: 1.6; color: #757981; margin-top: auto">Prompt engineering, evaluation harnesses, system flows</span>
+        </div>
+      
+        <div class="skill on" data-cat="ai" style="background: #F3F3F4; padding: 32px 28px 36px; border: 1px solid transparent; display: flex; flex-direction: column; gap: 14px; min-height: 200px">
+          <span class="mono" style="font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent)">Core scripting</span>
+          <span class="serif" style="font-size: 28px; line-height: 1.1">Python &amp; automation</span>
+          <span style="font-size: 14px; line-height: 1.6; color: #757981; margin-top: auto">FastAPI, Pandas ETL, custom scraper harnesses</span>
+        </div>
+      
+        <div class="skill on" data-cat="software" style="background: #F3F3F4; padding: 32px 28px 36px; border: 1px solid transparent; display: flex; flex-direction: column; gap: 14px; min-height: 200px">
+          <span class="mono" style="font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent)">Frontend core</span>
+          <span class="serif" style="font-size: 28px; line-height: 1.1">Next.js &amp; React</span>
+          <span style="font-size: 14px; line-height: 1.6; color: #757981; margin-top: auto">App Router, Server Components, SSR, responsive UI</span>
+        </div>
+      
+        <div class="skill on" data-cat="software" style="background: #F3F3F4; padding: 32px 28px 36px; border: 1px solid transparent; display: flex; flex-direction: column; gap: 14px; min-height: 200px">
+          <span class="mono" style="font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent)">Database &amp; auth</span>
+          <span class="serif" style="font-size: 28px; line-height: 1.1">Supabase &amp; Postgres</span>
+          <span style="font-size: 14px; line-height: 1.6; color: #757981; margin-top: auto">Row-level security, realtime events, SQL tuning</span>
+        </div>
+      
+        <div class="skill on" data-cat="software" style="background: #F3F3F4; padding: 32px 28px 36px; border: 1px solid transparent; display: flex; flex-direction: column; gap: 14px; min-height: 200px">
+          <span class="mono" style="font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent)">Cloud platform</span>
+          <span class="serif" style="font-size: 28px; line-height: 1.1">Vercel &amp; edge</span>
+          <span style="font-size: 14px; line-height: 1.6; color: #757981; margin-top: auto">Serverless functions, edge routing, CI/CD</span>
+        </div>
+      
+        <div class="skill on" data-cat="software" style="background: #F3F3F4; padding: 32px 28px 36px; border: 1px solid transparent; display: flex; flex-direction: column; gap: 14px; min-height: 200px">
+          <span class="mono" style="font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent)">Financial integration</span>
+          <span class="serif" style="font-size: 28px; line-height: 1.1">Plaid API</span>
+          <span style="font-size: 14px; line-height: 1.6; color: #757981; margin-top: auto">Secure banking OAuth, live transaction streams</span>
+        </div>
+      
+        <div class="skill on" data-cat="operations" style="background: #F3F3F4; padding: 32px 28px 36px; border: 1px solid transparent; display: flex; flex-direction: column; gap: 14px; min-height: 200px">
+          <span class="mono" style="font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent)">Operations domain</span>
+          <span class="serif" style="font-size: 28px; line-height: 1.1">Supply chain &amp; ICQA</span>
+          <span style="font-size: 14px; line-height: 1.6; color: #757981; margin-top: auto">Inventory accuracy, 3PL oversight, logistics routing</span>
+        </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" style="border-top: 1px solid #E1E2E5">
+    <div style="max-width: 1320px; margin: 0 auto; padding: clamp(88px, 11vw, 160px) clamp(16px, 4vw, 48px)">
+      <div style="display: flex; flex-wrap: wrap; gap: 32px 80px; margin-bottom: 64px">
+        <div class="rv mono" style="flex: 0 0 200px; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent)">04 — Experience</div>
+        <h2 class="rv serif" style="flex: 1 1 560px; margin: 0; font-size: clamp(40px, 5.2vw, 76px); line-height: 1.02; letter-spacing: -0.02em">Where enterprise logistics meets <span style="font-weight: 300">software</span>.</h2>
+      </div>
+
+      <div class="role rv" style="display: flex; flex-wrap: wrap; gap: 16px 80px; padding: 40px 0; border-top: 1px solid #DDDEE1">
+        <div class="mono" style="flex: 0 0 200px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); padding-top: 10px">Current</div>
+        <div style="flex: 1 1 560px">
+          <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px 24px; margin-bottom: 14px">
+            <h3 class="serif" style="margin: 0; font-size: clamp(28px, 2.8vw, 40px); line-height: 1.1">Senior Supply Chain Manager</h3>
+            <span style="font-size: 16px; color: #363B45">Mito Red Light</span>
+          </div>
+          <p style="margin: 0 0 18px; font-size: 16px; line-height: 1.7; color: #575C65; max-width: 720px">End-to-end supply-chain logistics, inventory optimisation and vendor integrations, while building custom software and AI tooling to automate tracking and visibility.</p>
+          <ul style="margin: 0; padding-left: 18px; font-size: 15px; line-height: 1.8; color: #363B45; max-width: 720px">
+            <li>Architected an internal logistics portal that cut delivery-tracking latency across nationwide fulfilment hubs.</li>
+            <li>Integrated automated tracking-agent pipelines ingesting third-party carrier status data.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="role rv" style="display: flex; flex-wrap: wrap; gap: 16px 80px; padding: 40px 0; border-top: 1px solid #DDDEE1">
+        <div class="mono" style="flex: 0 0 200px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #757981; padding-top: 10px">Operations</div>
+        <div style="flex: 1 1 560px">
+          <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px 24px; margin-bottom: 14px">
+            <h3 class="serif" style="margin: 0; font-size: clamp(28px, 2.8vw, 40px); line-height: 1.1">ICQA Operations Manager</h3>
+            <span style="font-size: 16px; color: #363B45">Target Corporation</span>
+          </div>
+          <p style="margin: 0 0 18px; font-size: 16px; line-height: 1.7; color: #575C65; max-width: 720px">Led high-velocity inventory control and quality assurance in enterprise distribution-centre environments.</p>
+          <ul style="margin: 0; padding-left: 18px; font-size: 15px; line-height: 1.8; color: #363B45; max-width: 720px">
+            <li>Supervised multi-shift ICQA teams, sustaining high inventory-record accuracy and defect reduction.</li>
+            <li>Ran root-cause analysis on variance bottlenecks with data-analysis methods.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="role rv" style="display: flex; flex-wrap: wrap; gap: 16px 80px; padding: 40px 0; border-top: 1px solid #DDDEE1; border-bottom: 1px solid #DDDEE1">
+        <div class="mono" style="flex: 0 0 200px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #757981; padding-top: 10px">Education</div>
+        <div style="flex: 1 1 560px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px 24px">
+          <h3 class="serif" style="margin: 0; font-size: clamp(28px, 2.8vw, 40px); line-height: 1.1">Bachelor of Science</h3>
+          <span style="font-size: 16px; color: #363B45">Arizona State University · Tempe</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" style="border-top: 1px solid #E1E2E5; background: #F0F0F2">
+    <div style="max-width: 1320px; margin: 0 auto; padding: clamp(96px, 13vw, 200px) clamp(16px, 4vw, 48px) clamp(72px, 9vw, 120px)">
+      <div class="rv mono" style="font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 40px">05 — Contact</div>
+      <h2 class="rv serif" style="margin: 0 0 56px; font-size: clamp(56px, 10vw, 160px); line-height: 0.92; letter-spacing: -0.035em">Let’s solve the <span style="font-weight: 300; color: var(--accent)">hard</span> part.</h2>
+      <p class="rv" style="margin: 0 0 56px; max-width: 620px; font-size: 19px; line-height: 1.6; color: #575C65">Hiring an applied AI engineer, solutions architect or technical operations leader? Write directly — I reply personally.</p>
+
+      <div class="rv" style="display: flex; flex-wrap: wrap; align-items: center; gap: 24px 40px; padding: 40px 0; border-top: 1px solid #D5D6DA; border-bottom: 1px solid #D5D6DA">
+        <a class="mail serif" href="mailto:Nathan.knott@yahoo.com" style="flex: 1 1 auto; font-size: clamp(32px, 5vw, 72px); line-height: 1.1; letter-spacing: -0.02em; color: #121720; padding-bottom: 6px; overflow-wrap: anywhere">Nathan.knott@yahoo.com <span class="arrow" style="font-family: inherit; font-weight: 300; font-size: 0.6em">→</span></a>
+        <button type="button" class="btn btn-ghost" id="copyBtn" style="background: transparent; border: 1px solid #C5C7CC; color: #121720; padding: 14px 24px; border-radius: 999px; font-family: 'Google Sans Code', monospace; font-size: 13px; letter-spacing: 0.06em; cursor: pointer; min-height: 48px">
+          <span id="copyLabel">Copy address</span>
+        </button>
+      </div>
+
+      <div class="rv mono" style="margin-top: 32px; display: flex; flex-wrap: wrap; gap: 12px 40px; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #757981">
+        <span>Mesa, Arizona</span>
+        <span>Open to remote &amp; hybrid</span>
+        <span>Usually replies within a day</span>
+      </div>
+    </div>
+
+    <footer style="border-top: 1px solid #E1E2E5">
+      <div class="mono" style="max-width: 1320px; margin: 0 auto; padding: 28px clamp(16px, 4vw, 48px); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; font-size: 12px; color: #90949C">
+        <span>© 2026 Nathan Knott</span>
+        <a class="navlink" href="#top">Back to top ↑</a>
+      </div>
+    </footer>
+  </section>
+</div>
+<script>
+document.querySelectorAll('.chip').forEach(function(b){b.addEventListener('click',function(){
+  var f=b.dataset.filter;
+  document.querySelectorAll('.chip').forEach(function(c){var on=c===b;c.classList.toggle('sel',on);c.setAttribute('aria-pressed',on)});
+  document.querySelectorAll('.skill').forEach(function(s){var on=f==='all'||s.dataset.cat===f;s.classList.toggle('on',on);s.classList.toggle('off',!on)});
+})});
+var t,btn=document.getElementById('copyBtn'),lab=document.getElementById('copyLabel');
+btn.addEventListener('click',function(){
+  function show(msg){lab.textContent=msg;lab.className='copied';lab.style.color='var(--accent)';clearTimeout(t);t=setTimeout(function(){lab.textContent='Copy address';lab.className='';lab.style.color=''},2400)}
+  function sel(){var r=document.createRange();r.selectNodeContents(document.querySelector('.mail'));var w=getSelection();w.removeAllRanges();w.addRange(r);show('Selected \u2014 press Ctrl/\u2318+C')}
+  try{navigator.clipboard.writeText('Nathan.knott@yahoo.com').then(function(){show('Copied \u2713')},sel)}catch(e){sel()}
+});
+</script>
+</body>
+</html>
