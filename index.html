@@ -2,448 +2,664 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Nathan Knott — Applied AI &amp; Solutions Architect</title>
-<link rel="canonical" href="https://mrdizzle94-design.github.io/">
-<meta property="og:title" content="Nathan Knott — Applied AI &amp; Solutions Architect">
-<meta property="og:description" content="Multi-agent systems, full-stack platforms and logistics automation. Contact: Nathan.knott@yahoo.com">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nathan Knott Portfolio</title>
+<meta name="description" content="Supply chain and operations manager with 19 years leading teams. Portfolio of results and the AI tools I built: a supply chain portal with AI agents, VeloFlow and an AI marketing agency.">
+<meta property="og:type" content="website">
 <meta property="og:url" content="https://mrdizzle94-design.github.io/">
-<meta property="og:type" content="profile">
-<meta name="description" content="Nathan Knott — applied AI and software solutions architect. Multi-agent systems, full-stack platforms and logistics automation. Contact: Nathan.knott@yahoo.com">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,300..700&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:wght@400;500&amp;display=swap" rel="stylesheet">
+<meta property="og:title" content="Nathan Knott · Supply Chain &amp; Operations">
+<meta property="og:description" content="Ask more of your supply chain. Results, experience and the AI tools I built.">
+<meta property="og:image" content="https://mrdizzle94-design.github.io/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1'%3E%3Cstop offset='0' stop-color='%23f4a086'/%3E%3Cstop offset='.35' stop-color='%237aaab8'/%3E%3Cstop offset='.68' stop-color='%2322c9e6'/%3E%3Cstop offset='1' stop-color='%232ee6a8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='32' cy='32' r='28' fill='%23fff' stroke='url(%23g)' stroke-width='6'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Arial' font-weight='700' font-size='30' fill='%231f1f1f'%3EN%3C/text%3E%3C/svg%3E">
 <style>
-html{scroll-behavior:smooth}
-body{margin:0;background:#F3F3F4}
-a{color:#121720;text-decoration:none}a:hover{color:#000000}
-::selection{background:#375C95;color:#F3F3F4}
-.nk *{box-sizing:border-box}
-.serif{font-family:'Google Sans','Product Sans','Google Sans Flex',system-ui,sans-serif;font-weight:500;letter-spacing:-0.03em}
-.mono{font-family:'Google Sans Code',ui-monospace,monospace}
-
-/* load-in: the name rises out of its own baseline */
-.mask{display:block;overflow:hidden;padding-bottom:0.08em}
-.mask > span{display:block;animation:lift 1.3s cubic-bezier(.19,1,.22,1) both}
-.d1{animation-delay:.15s!important}.d2{animation-delay:.3s!important}.d3{animation-delay:.45s!important}.d4{animation-delay:.7s!important}.d5{animation-delay:.9s!important}
-@keyframes lift{from{transform:translateY(105%)}to{transform:none}}
-.fade{animation:fade 1.4s cubic-bezier(.19,1,.22,1) both}
-@keyframes fade{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
-.rule-in{transform-origin:left;animation:draw 1.6s cubic-bezier(.19,1,.22,1) .5s both}
-@keyframes draw{from{transform:scaleX(0)}to{transform:scaleX(1)}}
-
-/* scroll-linked reveals: content arrives as you reach it */
-@supports (animation-timeline: view()){
-  .rv{animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 45%}
-  .rv-l{animation:slide linear both;animation-timeline:view();animation-range:entry 5% entry 55%}
-  .grow{transform-origin:left;animation:draw linear both;animation-timeline:view();animation-range:entry 20% cover 45%}
-  .line{animation:type linear both;animation-timeline:view();animation-range:entry 30% cover 40%}
-  .line:nth-child(2){animation-range:entry 45% cover 45%}
-  .line:nth-child(3){animation-range:entry 60% cover 50%}
-  .line:nth-child(4){animation-range:entry 75% cover 55%}
-  .progress{animation:draw linear both;animation-timeline:scroll(root)}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0;font:14px/1.5 system-ui,sans-serif}
+img,video{max-width:100%}
+[hidden]{display:none!important}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap">
+<style>
+/* Layout: Google Store look. Flat white nav, a full-width rounded hero card with text bottom-left,
+   then soft-grey rounded product tiles, a scrolling "highlights" carousel and a dark contact band.
+   Deliberately light-only, like the store itself. */
+:root{
+  color-scheme:light;
+  --bg:#ffffff; --tile:#f1f3f4; --tile-2:#e8eaed; --line:#dadce0;
+  --ink:#1f1f1f; --muted:#5f6368; --invert:#ffffff;
+  --blue:#1a73e8; --red:#ea4335; --yellow:#fbbc04; --green:#34a853;
+  --blue-tint:#e8f0fe; --green-tint:#e6f4ea;
+  --amber:#e0a12b; --amber-deep:#9a5b10; --coral:#f2a08a;
+  --font:"Google Sans","Google Sans Text","Product Sans",Roboto,Arial,sans-serif;
+  --body:"Google Sans",Roboto,Arial,sans-serif;
+  --ease:cubic-bezier(.2,0,0,1);
+  --r:28px;
 }
-@keyframes rise{from{opacity:0;transform:translateY(48px)}to{opacity:1;transform:none}}
-@keyframes slide{from{opacity:0;transform:translateX(-28px)}to{opacity:1;transform:none}}
-@keyframes type{from{opacity:0;clip-path:inset(0 100% 0 0)}to{opacity:1;clip-path:inset(0 0 0 0)}}
-.mq-wrap{-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
-.mq{display:flex;width:max-content;animation:marquee 42s linear infinite}
-.mq-group{display:flex;align-items:center;gap:0.6em;padding-right:0.6em;white-space:nowrap}
-.mq-wrap:hover .mq{animation-play-state:paused}
-@keyframes marquee{to{transform:translateX(-50%)}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.55 var(--body);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+h1,h2,h3,h4{font-family:var(--font);margin:0;text-wrap:balance}
+p{margin:0}
+a{color:var(--blue)}
+.wrap{max-width:1400px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+@media (min-width:900px){.wrap{padding-left:max(48px,env(safe-area-inset-left,0px));padding-right:max(48px,env(safe-area-inset-right,0px))}}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:12px}
 
-/* hover states */
-.navlink{position:relative;color:#575C65;transition:color .4s ease}
-.navlink::after{content:'';position:absolute;left:0;right:0;bottom:-6px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .6s cubic-bezier(.19,1,.22,1)}
-.navlink:hover{color:#121720}.navlink:hover::after{transform:scaleX(1);transform-origin:left}
-.btn{transition:background .5s cubic-bezier(.19,1,.22,1),color .5s,border-color .5s,transform .5s cubic-bezier(.19,1,.22,1)}
-.btn:hover{transform:translateY(-2px)}
-.btn-solid:hover{background:#000000!important;color:#F3F3F4!important}
-.btn-ghost:hover{border-color:var(--accent)!important;color:#000000!important}
-.arrow{display:inline-block;transition:transform .6s cubic-bezier(.19,1,.22,1)}
-.btn:hover .arrow,.case:hover .arrow,.mail:hover .arrow{transform:translateX(6px)}
-.case{transition:background .8s cubic-bezier(.19,1,.22,1)}
-.case:hover{background:#EDEDEF}
-.case .ix{transition:color .6s ease}
-.case:hover .ix{color:var(--accent)!important}
-.pillar{transition:border-color .6s ease,transform .8s cubic-bezier(.19,1,.22,1)}
-.pillar:hover{border-color:#C5C7CC!important;transform:translateY(-4px)}
-.skill{transition:opacity .7s cubic-bezier(.19,1,.22,1),transform .7s cubic-bezier(.19,1,.22,1),filter .7s ease,border-color .5s ease}
-.skill.off{opacity:.16;transform:scale(.97);filter:grayscale(1)}
-.skill.on:hover{border-color:var(--accent)!important}
-.chip{transition:background .5s cubic-bezier(.19,1,.22,1),color .5s,border-color .5s}
-.chip:hover{border-color:#9498A0!important;color:#121720!important}
-.mail{background-image:linear-gradient(currentColor,currentColor);background-size:0% 1px;background-repeat:no-repeat;background-position:0 100%;transition:background-size .9s cubic-bezier(.19,1,.22,1),color .5s}
-.mail:hover{background-size:100% 1px;color:var(--accent)!important}
-.role{transition:padding-left .7s cubic-bezier(.19,1,.22,1)}
-.role:hover{padding-left:12px!important}
-.dot{animation:pulse 2.4s ease-in-out infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
-.copied{animation:fade .6s cubic-bezier(.19,1,.22,1) both}
+/* ---------- nav ---------- */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);transition:box-shadow .25s var(--ease)}
+.nav.raised{box-shadow:0 1px 0 var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:28px;height:72px}
+.g{display:flex;flex:none}
+.links{display:flex;gap:30px;min-width:0;overflow-x:auto;scrollbar-width:none}
+.links a{font:400 17px var(--font);color:var(--ink);text-decoration:none;white-space:nowrap;padding:6px 0;position:relative}
+.links a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--ink);transform:scaleX(0);transition:transform .25s var(--ease)}
+.links a:hover::after,.links a.on::after{transform:scaleX(1)}
+.tools{margin-left:auto;display:flex;align-items:center;gap:22px;flex:none}
+.tools .loc{display:flex;align-items:center;gap:6px;font:400 17px var(--font);white-space:nowrap}
+.g{text-decoration:none}
+/* name pill; the border blends the two projects: Partner Up coral and teal, VeloFlow cyan and mint.
+   On scroll the rest of the name folds away and the pill closes to a circle around the N. */
+.nmark{display:inline-flex;align-items:center;justify-content:center;height:46px;min-width:46px;padding:0 18px;border:3px solid transparent;border-radius:999px;
+  background:linear-gradient(var(--bg),var(--bg)) padding-box,linear-gradient(90deg,#f4a086,#7aaab8 35%,#22c9e6 68%,#2ee6a8) border-box;
+  font:700 20px/1 var(--font);letter-spacing:-.01em;color:var(--ink);white-space:nowrap;transition:padding .4s var(--ease)}
+.nmark .rest{display:inline-block;overflow:hidden;max-width:9em;opacity:1;transition:max-width .4s var(--ease),opacity .25s var(--ease)}
+.nav.compact .nmark{padding:0}
+.nav.compact .nmark .rest{max-width:0;opacity:0}
+.g:hover .nmark{background:linear-gradient(var(--tile),var(--tile)) padding-box,linear-gradient(90deg,#f4a086,#7aaab8 35%,#22c9e6 68%,#2ee6a8) border-box}
+.pill.sm{padding:9px 18px;font-size:15px}
+.avatar{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font:500 17px var(--font);color:#fff;
+  background:conic-gradient(var(--blue) 0 25%,var(--red) 0 50%,var(--yellow) 0 75%,var(--green) 0);position:relative}
+.avatar span{width:34px;height:34px;border-radius:50%;background:#3c4043;display:grid;place-items:center}
+@media (max-width:860px){.links{display:none}}
+@media (max-width:480px){.tools .loc span{display:none}}
 
-.still *,.still *::before,.still *::after{animation:none!important;transition:none!important}
-@media (prefers-reduced-motion: reduce){.nk *,.nk *::before,.nk *::after{animation:none!important;transition-duration:.01ms!important}html{scroll-behavior:auto}}
-@media (max-width: 720px){.hide-sm{display:none!important}}
-.chip{font-family:inherit;font-size:14px;padding:12px 20px;min-height:44px;border-radius:999px;cursor:pointer;border:1px solid #C5C7CC;background:transparent;color:#575C65}
-.chip.sel,.chip.sel:hover{border-color:#121720!important;background:#121720;color:#F3F3F4!important}
+/* ---------- pill buttons ---------- */
+.pill{position:relative;overflow:hidden;display:inline-flex;align-items:center;gap:8px;font:500 17px var(--font);padding:13px 26px;border-radius:999px;
+  text-decoration:none;border:0;cursor:pointer;transition:background .2s var(--ease),transform .2s var(--ease)}
+.pill.white{background:#fff;color:var(--ink)}
+.pill.white:hover{background:#f1f3f4}
+.pill.blue{background:var(--blue);color:#fff}
+.pill.blue:hover{background:#1765cc}
+.pill.ghost{background:transparent;color:var(--blue);padding-inline:14px}
+.pill.ghost:hover{background:var(--blue-tint)}
+.pill:active{transform:scale(.97)}
+.ripple{position:absolute;border-radius:50%;transform:scale(0);background:currentColor;opacity:.22;pointer-events:none;animation:rip .6s var(--ease)}
+@keyframes rip{to{transform:scale(4);opacity:0}}
+
+/* ---------- hero card ---------- */
+.hero{padding-block:8px 24px}
+.hero-card{position:relative;border-radius:var(--r);overflow:hidden;min-height:clamp(520px,62vw,800px);isolation:isolate;
+  background:
+    radial-gradient(120% 90% at 85% 10%,#f1b440 0,transparent 55%),
+    radial-gradient(90% 80% at 10% 30%,#c98a1c 0,transparent 60%),
+    linear-gradient(160deg,#e6a52c,#b9741a 55%,#3a2410)}
+/* the striped shirt band, a nod to the reference photo */
+.hero-card .shirt{position:absolute;inset:-10% 30% -10% 34%;transform:rotate(-14deg);z-index:-1;
+  background:repeating-linear-gradient(90deg,#7fa8d6 0 26px,#2f4f86 26px 34px,#9cc3e6 34px 58px,#e6c25a 58px 62px,#6b8fc7 62px 88px,#3a2b1c 88px 96px);
+  box-shadow:0 0 80px rgba(0,0,0,.35);opacity:.92}
+.hero-card .shade{position:absolute;inset:0;z-index:0;background:linear-gradient(180deg,transparent 35%,rgba(0,0,0,.25) 55%,rgba(0,0,0,.78) 100%)}
+.hero-copy{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:clamp(24px,4vw,52px);display:grid;gap:18px;justify-items:start;color:#fff;max-width:900px}
+.hero-copy .kicker{font:500 clamp(16px,1.6vw,20px) var(--font)}
+.hero-copy h1{font-size:clamp(40px,6.4vw,92px);font-weight:500;line-height:1.02;letter-spacing:-.035em}
+.hero-copy p.sub{font-size:clamp(16px,1.5vw,19px);max-width:600px;color:rgba(255,255,255,.88)}
+.hero-copy .row{display:flex;flex-wrap:wrap;gap:12px}
+.hero-copy .pill.outline{background:transparent;color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.7)}
+.hero-copy .pill.outline:hover{background:rgba(255,255,255,.12)}
+
+/* phone in the hero, showing VeloFlow */
+.phone{position:absolute;z-index:1;width:clamp(190px,22vw,320px);aspect-ratio:9/19;right:clamp(16px,14vw,240px);top:clamp(36px,6vw,90px);
+  border-radius:clamp(28px,3vw,44px);background:#1b1b1b;padding:clamp(7px,.8vw,11px);transform:rotate(-16deg);
+  box-shadow:0 40px 80px rgba(0,0,0,.45),inset 0 0 0 2px #444;max-width:100%}
+.screen{width:100%;height:100%;border-radius:clamp(22px,2.4vw,34px);background:#fbfbfd;overflow:hidden;display:grid;align-content:start;gap:10px;
+  padding:clamp(14px,1.6vw,22px) clamp(12px,1.3vw,18px);font-family:var(--font);color:var(--ink)}
+.screen.shot{padding:0;background:#0e1424;display:block}
+.screen.shot img{display:block;width:100%;height:100%;object-fit:cover;object-position:top}
+.screen .top{display:flex;justify-content:space-between;align-items:center;font-size:clamp(10px,.9vw,13px);color:var(--muted)}
+.vf-mark{display:flex;align-items:center;gap:6px;font-weight:700;font-size:clamp(12px,1.1vw,16px);color:var(--ink)}
+.vf-mark i{width:clamp(16px,1.4vw,22px);aspect-ratio:1;border-radius:7px;background:linear-gradient(135deg,#1a73e8,#34a853)}
+.screen .bal{font-size:clamp(10px,.85vw,12px);color:var(--muted)}
+.screen .big{font-size:clamp(22px,2.4vw,34px);font-weight:500;letter-spacing:-.02em;line-height:1}
+.bars{display:flex;align-items:flex-end;gap:5px;height:clamp(54px,6vw,86px);padding-top:6px}
+.bars b{flex:1;border-radius:6px 6px 3px 3px;background:var(--blue-tint)}
+.bars b.hi{background:var(--blue)}
+.cat{display:grid;grid-template-columns:auto 1fr auto;gap:8px;align-items:center;font-size:clamp(10px,.9vw,13px);padding:7px 9px;border-radius:12px;background:var(--tile)}
+.cat i{width:10px;height:10px;border-radius:50%}
+.coach{margin-top:4px;padding:9px 11px;border-radius:14px 14px 14px 4px;background:var(--blue-tint);font-size:clamp(10px,.85vw,12.5px);line-height:1.35}
+/* hero holds the supply chain laptop: stacked on small screens, side by side from 1000px */
+.hero-card{display:grid;grid-template-columns:minmax(0,1fr);align-content:space-between}
+.hero-card .hero-copy{position:relative;left:auto;right:auto;bottom:auto}
+.laptop.hero-lap{position:relative;z-index:1;margin:clamp(36px,5vw,52px) auto 0;width:min(520px,calc(100% - 56px));
+  transform:perspective(1400px) rotateY(-12deg) rotateX(4deg);filter:drop-shadow(0 30px 50px rgba(0,0,0,.4))}
+.hero-lap .lid{animation:none!important}
+@media (min-width:1000px){
+  .hero-card{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);grid-template-rows:1fr;align-items:end}
+  .hero-card .hero-copy{grid-column:1;grid-row:1}
+  .laptop.hero-lap{grid-column:2;grid-row:1;align-self:center;width:calc(100% - 96px);margin:40px 64px 40px 16px}
+}
+@media (max-width:700px){.phone{right:50%;transform:translateX(50%) rotate(-12deg);top:28px;width:min(180px,46vw)}.hero-card{min-height:640px}}
+
+/* ---------- scroll motion (complete at rest; animates where supported) ---------- */
+@media (prefers-reduced-motion:no-preference){
+  .hero-copy>*{animation:rise .8s var(--ease) both}
+  .hero-copy>*:nth-child(2){animation-delay:.08s}.hero-copy>*:nth-child(3){animation-delay:.16s}.hero-copy>*:nth-child(4){animation-delay:.24s}
+  .phone,.hero-lap{animation:float 7s ease-in-out infinite}
+  @supports (animation-timeline:view()){
+    .reveal{animation:reveal linear both;animation-timeline:view();animation-range:entry 0% cover 25%}
+    .hero-card .shirt{animation:drift linear both;animation-timeline:scroll(root);animation-range:0 90vh}
+    .zoom{animation:zoom linear both;animation-timeline:view();animation-range:entry 0% cover 40%}
+  }
+}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}}
+@keyframes reveal{from{opacity:.1;transform:translateY(48px)}}
+@keyframes zoom{from{transform:scale(.94);border-radius:48px}}
+@keyframes drift{to{transform:rotate(-8deg) translateY(-60px)}}
+@keyframes float{50%{translate:0 -10px}}
+
+/* ---------- sections ---------- */
+section{padding-block:clamp(48px,7vw,96px)}
+.sec-head{display:flex;align-items:end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:32px}
+.sec-head h2{font-size:clamp(34px,4.6vw,60px);font-weight:500;letter-spacing:-.03em;line-height:1.05}
+.sec-head p{color:var(--muted);font-size:18px;max-width:560px}
+
+/* highlights carousel */
+.carousel{position:relative}
+.track{display:grid;grid-auto-flow:column;grid-auto-columns:clamp(240px,26vw,330px);gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;
+  scrollbar-width:none;padding-bottom:4px;overscroll-behavior-x:contain}
+.track::-webkit-scrollbar{display:none}
+.hl{scroll-snap-align:start;border-radius:var(--r);background:var(--tile);padding:28px;display:grid;gap:6px;align-content:space-between;min-height:250px;
+  transition:background .25s var(--ease)}
+.hl:hover{background:var(--tile-2)}
+.hl .lbl{font:500 15px var(--font);color:var(--muted)}
+.hl b{font:500 clamp(48px,5vw,68px)/1 var(--font);letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.hl:nth-child(4n+1) b{color:var(--blue)}.hl:nth-child(4n+2) b{color:var(--red)}.hl:nth-child(4n+3) b{color:#e37400}.hl:nth-child(4n+4) b{color:var(--green)}
+.hl p{font-size:16px}
+.arrows{display:flex;gap:10px}
+.arrow{width:48px;height:48px;border-radius:50%;border:1px solid var(--line);background:var(--bg);display:grid;place-items:center;cursor:pointer;transition:background .2s var(--ease)}
+.arrow:hover{background:var(--tile)}
+.arrow:disabled{opacity:.35;cursor:default}
+
+/* project feature tiles */
+.feature{border-radius:var(--r);overflow:hidden;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-height:560px;margin-bottom:24px}
+.feature.vf{background:var(--blue-tint)}
+.feature.pu{background:var(--green-tint)}
+@media (min-width:901px){.feature.vf .art{order:-1}.feature.pu .art{order:1}}
+.feature.sc{background:var(--coral-soft, #fbede9)}
+.feature .copy{padding:clamp(28px,4vw,56px);display:grid;gap:18px;align-content:center}
+.feature .eyebrow{font:500 16px var(--font);color:var(--muted)}
+.feature h3{font-size:clamp(34px,4.4vw,58px);font-weight:500;letter-spacing:-.03em;line-height:1.04}
+.vf-title{display:flex;align-items:center;gap:14px}
+.vf-title img{flex:none;width:clamp(44px,4vw,56px);height:auto;border-radius:14px;box-shadow:0 4px 12px rgba(32,33,36,.15)}
+.vf-title img.pu-logo{background:#fff;padding:5px;align-self:flex-start;margin-top:.12em}
+.feature .lead{font-size:clamp(17px,1.5vw,20px)}
+.feature .art{position:relative;display:grid;place-items:center;padding:32px;min-width:0}
+@media (max-width:900px){.feature{grid-template-columns:minmax(0,1fr)}.feature .art{order:-1;min-height:360px}}
+.problem{padding:18px 20px;border-radius:20px;background:rgba(255,255,255,.7)}
+.problem h4,.did h4{font:500 14px var(--font);color:var(--muted);margin-bottom:6px}
+.did ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.did li{display:grid;grid-template-columns:22px minmax(0,1fr);gap:10px}
+.did svg{margin-top:2px}
+.vf .did svg{color:var(--blue)}.pu .did svg{color:var(--green)}.sc .did svg{color:var(--red)}
+.stack{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:500 14px var(--font);padding:7px 14px;border-radius:999px;background:var(--bg);color:var(--ink);border:1px solid var(--line)}
+.cta{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+
+/* VeloFlow art: two phones */
+.vf .art .phone{position:relative;right:auto;top:auto;transform:rotate(-6deg);width:min(260px,58%);animation:none}
+.vf .art .phone.back{position:absolute;transform:translate(42%,6%) rotate(8deg);width:min(220px,48%);opacity:.95}
+.vf .art .phone.back .screen{background:#fff}
+
+/* Agency art: live pipeline board */
+.pu-art{gap:28px;align-content:center}
+.laptop{margin:0;width:100%;max-width:640px;display:grid;justify-items:center}
+.laptop .lid{position:relative;width:88%;background:#1b1b1b;border-radius:16px 16px 4px 4px;padding:3.2% 2.4% 2.4%;box-shadow:inset 0 0 0 2px #3c4043,0 30px 60px rgba(32,33,36,.22)}
+.laptop .cam{position:absolute;top:1.2%;left:50%;width:6px;height:6px;margin-left:-3px;border-radius:50%;background:#3c4043}
+.laptop .scr{position:relative;width:100%;aspect-ratio:16/10;border-radius:3px;overflow:hidden;background:#f7f7f5}
+.laptop .view{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:top left;opacity:0;transition:opacity .45s var(--ease)}
+.laptop .view.on{opacity:1}
+.seg{display:inline-flex;gap:4px;margin-top:16px;padding:4px;border-radius:999px;background:rgba(255,255,255,.75);border:1px solid var(--line)}
+.seg button{font:500 14px var(--font);border:0;background:transparent;color:var(--muted);padding:8px 16px;border-radius:999px;cursor:pointer;transition:background .2s var(--ease),color .2s var(--ease)}
+.seg button[aria-selected="true"]{background:var(--ink);color:#fff}
+.laptop .base{width:100%;height:clamp(10px,1.4vw,16px);background:linear-gradient(#e8eaed,#bdc1c6);border-radius:2px 2px 14px 14px;position:relative;box-shadow:0 12px 24px rgba(32,33,36,.18)}
+.laptop .base span{position:absolute;top:0;left:50%;width:16%;margin-left:-8%;height:45%;background:#9aa0a6;border-radius:0 0 8px 8px}
+.laptop figcaption{margin-top:12px;font:500 14px var(--font);color:var(--muted)}
+@media (prefers-reduced-motion:no-preference){@supports (animation-timeline:view()){.laptop .lid{transform-origin:50% 100%;animation:open linear both;animation-timeline:view();animation-range:entry 10% cover 40%}}}
+@keyframes open{from{transform:perspective(1200px) rotateX(-28deg)}}
+.pu-art .board{width:min(400px,100%);padding:18px;gap:8px}
+.board{width:min(460px,100%);background:#fff;border-radius:24px;padding:22px;box-shadow:0 30px 60px rgba(32,33,36,.16);display:grid;gap:10px;font-family:var(--font)}
+.board .bh{display:flex;justify-content:space-between;align-items:center;font-size:14px;color:var(--muted)}
+.board .bh b{color:var(--ink);font-weight:500;font-size:16px}
+.live{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--green)}
+.live i{width:8px;height:8px;border-radius:50%;background:var(--green);animation:pulse 1.6s infinite}
+@keyframes pulse{50%{opacity:.3}}
+.stage{display:grid;grid-template-columns:28px minmax(0,1fr) auto;gap:12px;align-items:center;padding:10px 12px;border-radius:14px;background:var(--tile);font-size:15px;
+  transition:background .4s var(--ease)}
+.stage .dot{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--bg);border:1px solid var(--line);transition:all .4s var(--ease)}
+.stage .st{font-size:13px;color:var(--muted)}
+.stage.done .dot{background:var(--green);border-color:var(--green)}
+.stage.done .dot svg{opacity:1}
+.stage .dot svg{opacity:0;transition:opacity .3s}
+.stage.now{background:var(--blue-tint)}
+.stage.now .dot{border-color:var(--blue);box-shadow:0 0 0 4px rgba(26,115,232,.18)}
+.stage.gate .st{color:var(--red)}
+
+/* experience */
+.jobs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:860px){.jobs{grid-template-columns:minmax(0,1fr)}}
+.job{border-radius:var(--r);background:var(--tile);padding:clamp(24px,3vw,36px);display:grid;gap:14px;align-content:start;transition:background .25s var(--ease),transform .3s var(--ease)}
+.job:hover{background:var(--tile-2)}
+.job.wide{grid-column:1/-1}
+.job .when{font:500 15px var(--font);color:var(--muted)}
+.job h3{font-size:clamp(24px,2.4vw,32px);font-weight:500;letter-spacing:-.02em;line-height:1.15}
+.job .co{font:500 17px var(--font);color:var(--blue)}
+.job ul{margin:0;padding-left:20px;display:grid;gap:6px}
+.kpis{display:flex;flex-wrap:wrap;gap:8px}
+.kpi{font:500 14px var(--font);padding:6px 14px;border-radius:999px;background:var(--bg);font-variant-numeric:tabular-nums}
+.job.wide .cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px 32px}
+@media (max-width:860px){.job.wide .cols{grid-template-columns:minmax(0,1fr)}}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+@media (max-width:1000px){.skills{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.skills{grid-template-columns:minmax(0,1fr)}}
+.skill{border-radius:var(--r);padding:28px;background:var(--tile);display:grid;gap:16px;align-content:start}
+.skill .ic{width:48px;height:48px;border-radius:16px;display:grid;place-items:center}
+.skill:nth-child(1) .ic{background:var(--blue)}.skill:nth-child(2) .ic{background:var(--red)}.skill:nth-child(3) .ic{background:var(--yellow)}.skill:nth-child(4) .ic{background:var(--green)}
+.skill h3{font-size:22px;font-weight:500}
+.skill ul{list-style:none;margin:0;padding:0;display:grid;gap:6px;color:var(--muted)}
+.cert{margin-top:16px;border-radius:var(--r);background:var(--tile);padding:22px 28px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.cert b{font:500 20px var(--font)}
+
+/* contact band */
+.contact{border-radius:var(--r);background:#202124;color:#fff;padding:clamp(36px,6vw,80px);display:grid;gap:22px;justify-items:start}
+.contact h2{font-size:clamp(36px,5.4vw,72px);font-weight:500;letter-spacing:-.035em;line-height:1.02;max-width:900px}
+.contact p{color:#bdc1c6;font-size:18px;max-width:600px}
+.addr{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.addr code{font:500 17px var(--font);padding:13px 22px;border-radius:999px;background:#303134;color:#fff;user-select:all;word-break:break-all}
+.contact .pill.outline{background:transparent;color:#fff;box-shadow:inset 0 0 0 1px #5f6368}
+.contact .pill.outline:hover{background:#303134}
+
+footer{padding-block:40px;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;border-top:1px solid var(--line);padding-top:28px}
+footer .wrap span:first-child{margin-right:auto}
+
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,40px);opacity:0;background:#202124;color:#fff;
+  padding:14px 22px;border-radius:12px;font:400 15px var(--font);transition:transform .3s var(--ease),opacity .3s var(--ease);z-index:40}
+.toast.show{transform:translate(-50%,0);opacity:1}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+
+/* macOS-style app switch on the supply chain laptops: the window minimises into its Dock icon, the next one opens out of its own */
+.mac .scr{background:radial-gradient(120% 90% at 15% 0%,#3d4f96 0,transparent 60%),radial-gradient(100% 90% at 95% 100%,#8a3e6a 0,transparent 60%),#151a2b}
+.mac .view{transform:scale(.06);opacity:0;border-radius:4px;transition:transform .55s cubic-bezier(.16,.9,.24,1),opacity .35s ease}
+.mac .view[data-v="agents"]{transform-origin:46% 102%}
+.mac .view[data-v="portal"]{transform-origin:54% 102%}
+.mac .view.on{transform:none;opacity:1}
+.mac .view.closing{transform:scale(.06) translateY(4%);opacity:0;transition:transform .36s cubic-bezier(.4,0,.7,.2),opacity .3s ease-in .06s}
+.dock{position:absolute;z-index:3;left:50%;bottom:2.2%;transform:translateX(-50%);display:flex;gap:4px;padding:3px 5px;border-radius:7px;
+  background:rgba(255,255,255,.22);box-shadow:inset 0 0 0 1px rgba(255,255,255,.3);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.dock i{position:relative;display:block;width:clamp(9px,1.05vw,15px);aspect-ratio:1;border-radius:26%;transition:transform .25s var(--ease)}
+.dock i::after{content:"";position:absolute;left:50%;bottom:-4px;width:3px;height:3px;margin-left:-1.5px;border-radius:50%;background:rgba(255,255,255,.85);opacity:0;transition:opacity .2s}
+.dock i.on::after{opacity:1}
+.dock i.bounce{animation:dockbounce .5s ease}
+.ic-agents{background:radial-gradient(circle at 30% 35%,#7c5cff 0 18%,transparent 19%),radial-gradient(circle at 70% 35%,#f59e0b 0 18%,transparent 19%),radial-gradient(circle at 50% 70%,#10b981 0 18%,transparent 19%),#0b0b0c}
+.ic-portal{background:linear-gradient(90deg,#e11d48 0 62%,#3a3a3e 62%) center 40%/70% 14% no-repeat,linear-gradient(#1f1f22,#1f1f22) center 68%/70% 16% no-repeat,#0b0b0c}
+@keyframes dockbounce{35%{transform:translateY(-45%)}70%{transform:translateY(0)}85%{transform:translateY(-12%)}}
+@media (prefers-reduced-motion:reduce){.mac .view{transition:none}}
 </style>
 </head>
 <body>
-<div class="nk" style="--accent: #375C95; background: #F3F3F4; color: #121720; font-family: 'Google Sans','Product Sans','Google Sans Flex', system-ui, sans-serif; font-weight: 400; min-height: 100vh; overflow-x: clip">
-
-  <!-- scroll progress -->
-  <div class="progress" style="position: fixed; top: 0; left: 0; right: 0; height: 2px; background: var(--accent); z-index: 60; transform-origin: left"></div>
-
-  <!-- NAV -->
-  <header style="position: sticky; top: 0; z-index: 50; background: rgba(243,243,244,0.78); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); border-bottom: 1px solid #E1E2E5">
-    <nav aria-label="Primary" style="max-width: 1320px; margin: 0 auto; padding: 18px clamp(16px, 4vw, 48px); display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap">
-      <a href="#top" style="display: flex; align-items: baseline; gap: 12px">
-        <span class="serif" style="font-size: 26px; letter-spacing: -0.01em">Nathan Knott</span>
-        <span class="mono hide-sm" style="font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #757981">Solutions Architect</span>
-      </a>
-      <div style="display: flex; align-items: center; gap: clamp(18px, 3vw, 40px); font-size: 14px; flex-wrap: wrap">
-        <a class="navlink hide-sm" href="#approach">Approach</a>
-        <a class="navlink hide-sm" href="#work">Work</a>
-        <a class="navlink hide-sm" href="#capabilities">Capabilities</a>
-        <a class="navlink hide-sm" href="#experience">Experience</a>
-        <a class="btn btn-ghost" href="#contact" style="padding: 11px 20px; border: 1px solid #C5C7CC; border-radius: 999px; color: #121720; min-height: 44px; display: inline-flex; align-items: center">Contact</a>
-      </div>
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="g" href="#top" aria-label="Nathan Knott, top of page"><span class="nmark">N<span class="rest">athan Knott</span></span></a>
+    <nav class="links" aria-label="Sections">
+      <a href="#highlights">Highlights</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
     </nav>
-  </header>
-
-  <!-- HERO -->
-  <section id="top" style="max-width: 1320px; margin: 0 auto; padding: clamp(72px, 12vw, 168px) clamp(16px, 4vw, 48px) clamp(64px, 9vw, 120px)">
-    <div class="fade d1 mono" style="display: flex; align-items: center; gap: 12px; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #575C65; margin-bottom: 48px">
-      <span class="dot" style="width: 7px; height: 7px; border-radius: 50%; background: var(--accent)"></span>
-      <span>Open to AI engineering &amp; solutions architecture roles</span>
+    <div class="tools">
+      <span class="loc"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg><span>Gilbert, AZ</span></span>
+      <a class="pill blue sm" href="#contact">Contact</a>
     </div>
+  </div>
+</header>
 
-    <h1 class="serif" style="margin: 0; font-size: clamp(64px, 13.5vw, 212px); line-height: 0.9; letter-spacing: -0.035em">
-      <span class="mask"><span class="d1">Nathan</span></span>
-      <span class="mask"><span class="d2" style="font-weight: 300; color: var(--accent); padding-left: clamp(0px, 8vw, 140px)">Knott</span></span>
-    </h1>
-
-    <div class="rule-in" style="height: 1px; background: #D5D6DA; margin: clamp(40px, 6vw, 72px) 0 40px"></div>
-
-    <div style="display: flex; flex-wrap: wrap; gap: 40px 64px; justify-content: space-between; align-items: flex-end">
-      <p class="fade d4" style="margin: 0; flex: 1 1 520px; max-width: 640px; font-size: clamp(19px, 1.7vw, 24px); line-height: 1.5; color: #363B45">
-        Applied AI &amp; software solutions architect. I turn supply-chain operations, manual data pipelines and workflow bottlenecks into <span class="serif" style="font-weight: 300; font-size: 1.15em; color: #121720">autonomous multi-agent systems</span> and production-grade web applications.
-      </p>
-      <div class="fade d5" style="display: flex; flex-wrap: wrap; gap: 12px">
-        <a class="btn btn-solid" href="#work" style="background: #121720; color: #F3F3F4; padding: 16px 28px; border-radius: 999px; font-weight: 500; font-size: 15px; min-height: 52px; display: inline-flex; align-items: center; gap: 10px">Selected work <span class="arrow">→</span></a>
-        <a class="btn btn-ghost" href="mailto:Nathan.knott@yahoo.com" style="border: 1px solid #C5C7CC; color: #121720; padding: 16px 28px; border-radius: 999px; font-size: 15px; min-height: 52px; display: inline-flex; align-items: center">Nathan.knott@yahoo.com</a>
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div class="hero-card zoom">
+        <div class="shirt" aria-hidden="true"></div>
+        <figure class="laptop hero-lap mac" aria-label="Supply Chain OS, the supply chain portal and AI agents I built">
+          <div class="lid"><span class="cam" aria-hidden="true"></span>
+            <div class="scr">
+              <img class="view on" data-v="agents" src="img/scos-agents.jpg" alt="Supply Chain OS: eight AI agents linked in a chain">
+              <img class="view" data-v="portal" src="img/scos-portal.jpg" alt="The supply chain portal home with the PO lead-time pipeline">
+              <div class="dock" aria-hidden="true"><i class="ic-agents on" data-v="agents"></i><i class="ic-portal" data-v="portal"></i></div>
+            </div>
+          </div>
+          <div class="base" aria-hidden="true"><span></span></div>
+        </figure>
+        <div class="shade" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <p class="kicker">Nathan Knott · Supply Chain &amp; Operations</p>
+          <h1>Ask more of your supply chain.</h1>
+          <p class="sub">19 years leading teams, 5 running distribution center operations and supply chain. I also build software with AI: a supply chain portal run by AI agents, a finance app and a marketing agency.</p>
+          <div class="row">
+            <a class="pill white" href="#projects">Explore projects</a>
+            <a class="pill outline" href="#experience">See experience</a>
+          </div>
+        </div>
       </div>
-    </div>
-
-    <div class="fade d5 mono" style="margin-top: 56px; display: flex; flex-wrap: wrap; gap: 12px 40px; font-size: 12px; letter-spacing: 0.08em; color: #757981; text-transform: uppercase">
-      <span>Mesa, Arizona</span>
-      <span>Remote / Hybrid</span>
-      <span>Arizona State University, BS</span>
-    </div>
-  </section>
-
-  <!-- DISCIPLINES BAND -->
-  <div class="mq-wrap" role="region" aria-label="Disciplines" style="border-top: 1px solid #E1E2E5; border-bottom: 1px solid #E1E2E5; overflow: hidden; padding: 28px 0">
-    <div class="mq serif" style="font-size: clamp(36px, 5vw, 72px); color: #C5C7CC; letter-spacing: -0.01em">
-      <div class="mq-group"><span>Multi-agent orchestration</span><span style="color: var(--accent)">·</span><span>Full-stack systems</span><span style="color: var(--accent)">·</span><span>Logistics automation</span><span style="color: var(--accent)">·</span><span>Data pipelines</span><span style="color: var(--accent)">·</span><span>Applied AI</span><span style="color: var(--accent)">·</span></div>
-      <div class="mq-group" aria-hidden="true"><span>Multi-agent orchestration</span><span style="color: var(--accent)">·</span><span>Full-stack systems</span><span style="color: var(--accent)">·</span><span>Logistics automation</span><span style="color: var(--accent)">·</span><span>Data pipelines</span><span style="color: var(--accent)">·</span><span>Applied AI</span><span style="color: var(--accent)">·</span></div>
     </div>
   </div>
 
-  <!-- APPROACH -->
-  <section id="approach" style="max-width: 1320px; margin: 0 auto; padding: clamp(88px, 11vw, 160px) clamp(16px, 4vw, 48px)">
-    <div style="display: flex; flex-wrap: wrap; gap: 32px 80px; margin-bottom: 72px">
-      <div class="rv mono" style="flex: 0 0 200px; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent)">01 — Approach</div>
-      <h2 class="rv serif" style="flex: 1 1 560px; margin: 0; font-size: clamp(40px, 5.2vw, 76px); line-height: 1.02; letter-spacing: -0.02em">Past superficial prompts — toward <span style="font-weight: 300">verifiable</span>, deterministic systems that remove real business friction.</h2>
-    </div>
-
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px">
-      <article class="pillar rv" style="border: 1px solid #DDDEE1; border-radius: 4px; padding: 40px 36px 44px; display: flex; flex-direction: column; gap: 20px">
-        <span class="mono" style="font-size: 12px; color: #757981">i.</span>
-        <h3 class="serif" style="margin: 0; font-size: 32px; line-height: 1.1">Autonomous multi-agent systems</h3>
-        <p style="margin: 0; font-size: 16px; line-height: 1.65; color: #575C65">Deconstructing multi-layered manual jobs into coordinated agent networks with deterministic tool validation, self-correction and human-in-the-loop fallback.</p>
-        <span class="mono" style="margin-top: auto; padding-top: 12px; font-size: 12px; letter-spacing: 0.06em; color: #363B45">Orchestration &amp; verification</span>
-      </article>
-      <article class="pillar rv" style="border: 1px solid #DDDEE1; border-radius: 4px; padding: 40px 36px 44px; display: flex; flex-direction: column; gap: 20px">
-        <span class="mono" style="font-size: 12px; color: #757981">ii.</span>
-        <h3 class="serif" style="margin: 0; font-size: 32px; line-height: 1.1">High-reliability full-stack core</h3>
-        <p style="margin: 0; font-size: 16px; line-height: 1.65; color: #575C65">Next.js, TypeScript and Supabase with row-level security and responsive, reactive interfaces. Built for uptime, clean audit trails and zero lag.</p>
-        <span class="mono" style="margin-top: auto; padding-top: 12px; font-size: 12px; letter-spacing: 0.06em; color: #363B45">Enterprise React + Supabase</span>
-      </article>
-      <article class="pillar rv" style="border: 1px solid #DDDEE1; border-radius: 4px; padding: 40px 36px 44px; display: flex; flex-direction: column; gap: 20px">
-        <span class="mono" style="font-size: 12px; color: #757981">iii.</span>
-        <h3 class="serif" style="margin: 0; font-size: 32px; line-height: 1.1">Data pipelines &amp; logistics automation</h3>
-        <p style="margin: 0; font-size: 16px; line-height: 1.65; color: #575C65">Real-world operations experience at Target ICQA and Mito Red Light, applied to eliminating shipping discrepancies, stockouts and manual tracking spreadsheets.</p>
-        <span class="mono" style="margin-top: auto; padding-top: 12px; font-size: 12px; letter-spacing: 0.06em; color: #363B45">Rooted in supply chain</span>
-      </article>
+  <section id="highlights">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <h2>Highlights</h2>
+        <div class="arrows">
+          <button class="arrow" id="prev" type="button" aria-label="Previous highlights"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M15.4 7.4 14 6l-6 6 6 6 1.4-1.4L10.8 12z"/></svg></button>
+          <button class="arrow" id="next" type="button" aria-label="Next highlights"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8.6 16.6 10 18l6-6-6-6-1.4 1.4 4.6 4.6z"/></svg></button>
+        </div>
+      </div>
+      <div class="carousel reveal">
+        <div class="track" id="track">
+          <article class="hl"><span class="lbl">Out-of-stock days</span><b>−90%</b><p>On a top product: 295 days down to 29.</p></article>
+          <article class="hl"><span class="lbl">Team size</span><b>130</b><p>Associates led at a Target distribution center.</p></article>
+          <article class="hl"><span class="lbl">Revenue</span><b>$12.7M</b><p>Supply chain run end to end as the company grew.</p></article>
+          <article class="hl"><span class="lbl">Productivity</span><b>+36%</b><p>At Target DC, plus +16% sortation throughput.</p></article>
+          <article class="hl"><span class="lbl">Orders checked</span><b>920+</b><p>Automatic checks that caught zero-revenue errors.</p></article>
+          <article class="hl"><span class="lbl">Inventory recovered</span><b>797</b><p>Units, turned around from negative inventory.</p></article>
+          <article class="hl"><span class="lbl">Experience</span><b>19 yrs</b><p>In management roles.</p></article>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- WORK -->
-  <section id="work" style="border-top: 1px solid #E1E2E5">
-    <div style="max-width: 1320px; margin: 0 auto; padding: clamp(88px, 11vw, 160px) clamp(16px, 4vw, 48px) 40px; display: flex; flex-wrap: wrap; gap: 32px 80px">
-      <div class="rv mono" style="flex: 0 0 200px; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent)">02 — Selected work</div>
-      <h2 class="rv serif" style="flex: 1 1 560px; margin: 0; font-size: clamp(40px, 5.2vw, 76px); line-height: 1.02; letter-spacing: -0.02em">Platforms that replace busywork with <span style="font-weight: 300">resilient</span> software.</h2>
-    </div>
+  <section id="projects" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head reveal"><h2>Projects I built</h2><p>Three working products I designed and built myself with AI coding tools, starting with the one I built to run a real supply chain.</p></div>
 
-    <!-- Case 1 -->
-    <article class="case" style="border-top: 1px solid #E1E2E5">
-      <div style="max-width: 1320px; margin: 0 auto; padding: clamp(56px, 7vw, 96px) clamp(16px, 4vw, 48px); display: flex; flex-wrap: wrap; gap: 48px 80px">
-        <div style="flex: 1 1 560px; min-width: 0">
-          <div class="rv-l" style="display: flex; align-items: baseline; gap: 24px; margin-bottom: 28px">
-            <span class="ix serif" style="font-size: 64px; line-height: 1; color: #C5C7CC; font-weight: 300">01</span>
-            <span class="mono" style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #757981">Production platform · Next.js · Supabase · Freight APIs</span>
-          </div>
-          <h3 class="rv serif" style="margin: 0 0 24px; font-size: clamp(34px, 3.6vw, 52px); line-height: 1.05; letter-spacing: -0.015em">Mito Logistics Portal &amp; autonomous AI agents</h3>
-          <p class="rv" style="margin: 0 0 40px; font-size: 17px; line-height: 1.7; color: #575C65; max-width: 620px">An end-to-end supply-chain portal paired with multi-agent tracking bots. It consumes carrier feeds, predicts transit-delay exceptions through LLM parsing, reconciles international shipping documents and surfaces live inventory telemetry for leadership.</p>
-          <div class="rv" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; border-top: 1px solid #DDDEE1; padding-top: 28px">
-            <div><div class="serif" style="font-size: clamp(36px, 3.4vw, 52px); line-height: 1; color: var(--accent)">85%</div><div class="mono" style="margin-top: 10px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #757981">Less manual entry</div></div>
-            <div><div class="serif" style="font-size: clamp(36px, 3.4vw, 52px); line-height: 1">Live</div><div class="mono" style="margin-top: 10px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #757981">Exception detection</div></div>
-            <div><div class="serif" style="font-size: clamp(36px, 3.4vw, 52px); line-height: 1">100%</div><div class="mono" style="margin-top: 10px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #757981">Carrier visibility</div></div>
-          </div>
+      <article class="feature sc reveal">
+        <div class="copy">
+          <p class="eyebrow">Internal tools · a $12.7M consumer brand</p>
+          <h3>Supply Chain Portal &amp; Supply Chain OS</h3>
+          <p class="lead">Two connected apps I built. The portal runs the day-to-day records: purchase orders, payments and warehouse stock. Supply Chain OS puts a team of 8 AI agents on top that watch that data, flag problems and write the reports.</p>
+          <div class="problem"><h4>The problem it solves</h4><p>Orders, shipments, payments and documents lived across spreadsheets, inboxes and five different systems. Problems, like an order priced at zero or a late shipment, were found after the fact.</p></div>
+          <div class="did"><h4>The portal</h4><ul>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5 10 17 19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Tracks every purchase order through 10 steps, from ordered to received, with the days between each step.</span></li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5 10 17 19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Separate logins for admin, suppliers and the warehouse. A new PO shows up in the supplier's portal right away.</span></li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5 10 17 19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Live stock from two 3PL warehouses, deposits and balances per PO, and checks against Shopify and the accounting system.</span></li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5 10 17 19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>A 12-month demand forecast with order-by dates from lead times, and reorder suggestions from sales speed.</span></li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5 10 17 19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>9 outside systems connected, including Shopify, both warehouses, accounting, Google and Slack.</span></li>
+          </ul></div>
+          <div class="did"><h4>Supply Chain OS, the AI layer</h4><ul>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5 10 17 19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>8 AI agents, each owning one job: planning, procurement, logistics, freight cost, audit, systems, reporting and distribution.</span></li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5 10 17 19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Every portal event, like a supplier uploading an invoice, becomes a handoff between agents in a live feed.</span></li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5 10 17 19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>One-click sweep: every agent audits the data and ranks what it finds as critical or warning, then posts to Slack.</span></li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5 10 17 19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>7 AI-built reports with charts and PDF export, including container sizing, landed cost per unit and freight invoices.</span></li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5 10 17 19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Voice: type a scenario and the agents talk it through out loud, using live data.</span></li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5 10 17 19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Automatic checks on 920+ orders caught zero-revenue errors before they shipped.</span></li>
+          </ul></div>
+          <div class="stack"><span class="chip">Next.js</span><span class="chip">Supabase</span><span class="chip">AI agents</span><span class="chip">Gemini API</span><span class="chip">Shopify API</span><span class="chip">Voice</span><span class="chip">Vercel</span></div>
         </div>
-        <div class="rv" style="flex: 1 1 380px; min-width: 0; align-self: center; background: #EDEDEF; border: 1px solid #DDDEE1; border-radius: 4px; padding: 28px">
-          <div class="mono" style="display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: #757981; padding-bottom: 18px; border-bottom: 1px solid #DDDEE1; margin-bottom: 18px">
-            <span>agent_event_stream.log</span>
-            <span class="dot" style="width: 7px; height: 7px; border-radius: 50%; background: var(--accent)"></span>
-          </div>
-          <div class="mono" style="display: flex; flex-direction: column; gap: 12px; font-size: 13px; line-height: 1.5; color: #363B45">
-            <div class="line"><span style="color: #9498A0">08:24:11</span>  Ingesting bill of lading #BOL-99214</div>
-            <div class="line"><span style="color: #9498A0">08:24:12</span>  Customs clearance delay parsed</div>
-            <div class="line"><span style="color: #9498A0">08:24:13</span>  <span style="color: var(--accent)">ETA recomputed: +36h</span></div>
-            <div class="line"><span style="color: #9498A0">08:24:14</span>  Vendor alert &amp; mitigation ticket sent</div>
-          </div>
-        </div>
-      </div>
-    </article>
-
-    <!-- Case 2 -->
-    <article class="case" style="border-top: 1px solid #E1E2E5">
-      <div style="max-width: 1320px; margin: 0 auto; padding: clamp(56px, 7vw, 96px) clamp(16px, 4vw, 48px); display: flex; flex-wrap: wrap; gap: 48px 80px">
-        <div style="flex: 1 1 560px; min-width: 0">
-          <div class="rv-l" style="display: flex; align-items: baseline; gap: 24px; margin-bottom: 28px">
-            <span class="ix serif" style="font-size: 64px; line-height: 1; color: #C5C7CC; font-weight: 300">02</span>
-            <span class="mono" style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #757981">Fintech platform · Next.js · Plaid · Claude API</span>
-          </div>
-          <h3 class="rv serif" style="margin: 0 0 24px; font-size: clamp(34px, 3.6vw, 52px); line-height: 1.05; letter-spacing: -0.015em">VeloFlow personal finance engine</h3>
-          <p class="rv" style="margin: 0 0 40px; font-size: 17px; line-height: 1.7; color: #575C65; max-width: 620px">A high-precision personal finance command centre aggregating multi-bank transactions through Plaid. AI auto-categorises irregular spending, analyses recurring burn and projects 90-day cash-flow health from incoming receivables and variable outlays.</p>
-          <div class="rv" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; border-top: 1px solid #DDDEE1; padding-top: 28px">
-            <div><div class="serif" style="font-size: clamp(36px, 3.4vw, 52px); line-height: 1; color: var(--accent)">90-day</div><div class="mono" style="margin-top: 10px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #757981">Cash runway forecast</div></div>
-            <div><div class="serif" style="font-size: clamp(36px, 3.4vw, 52px); line-height: 1">Plaid</div><div class="mono" style="margin-top: 10px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #757981">Multi-bank linking</div></div>
-            <div><div class="serif" style="font-size: clamp(36px, 3.4vw, 52px); line-height: 1">&lt;100ms</div><div class="mono" style="margin-top: 10px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #757981">Cached aggregation</div></div>
-          </div>
-        </div>
-        <div class="rv" style="flex: 1 1 380px; min-width: 0; align-self: center; background: #EDEDEF; border: 1px solid #DDDEE1; border-radius: 4px; padding: 28px">
-          <div class="mono" style="display: flex; justify-content: space-between; font-size: 12px; color: #757981; padding-bottom: 18px; border-bottom: 1px solid #DDDEE1; margin-bottom: 24px">
-            <span style="display: flex; align-items: center; gap: 10px">Runway forecast <span style="font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 8px; border: 1px solid #C5C7CC; border-radius: 999px; color: #575C65">Example</span></span>
-            <span style="color: var(--accent)">+18.4% health</span>
-          </div>
-          <div style="display: flex; flex-direction: column; gap: 22px">
-            <div>
-              <div class="mono" style="display: flex; justify-content: space-between; font-size: 12px; color: #575C65; margin-bottom: 10px"><span>Operating buffer</span><span>$28,450 / 90d</span></div>
-              <div style="height: 3px; background: #DDDEE1"><div class="grow" style="height: 3px; width: 76%; background: var(--accent)"></div></div>
+        <div class="art">
+          <figure class="laptop mac">
+            <div class="lid"><span class="cam" aria-hidden="true"></span>
+              <div class="scr">
+                <img class="view on" data-v="agents" src="img/scos-agents.jpg" alt="Supply Chain OS agent workflow: eight AI agents (planner, procurement, logistics, distribution, freight cost, auditor, systems and reporting) linked in a chain">
+                <img class="view" data-v="portal" src="img/scos-portal.jpg" alt="The supply chain portal home: the PO lead-time pipeline and cards for dashboard, create PO, payments, Shopify, two warehouses, accounting and replenishment">
+                <div class="dock" aria-hidden="true"><i class="ic-agents on" data-v="agents"></i><i class="ic-portal" data-v="portal"></i></div>
+              </div>
             </div>
-            <div>
-              <div class="mono" style="display: flex; justify-content: space-between; font-size: 12px; color: #575C65; margin-bottom: 10px"><span>Discretionary target</span><span>−12%</span></div>
-              <div style="height: 3px; background: #DDDEE1"><div class="grow" style="height: 3px; width: 64%; background: #121720"></div></div>
+            <div class="base" aria-hidden="true"><span></span></div>
+            <div class="seg" role="tablist" aria-label="Choose a screen">
+              <button type="button" role="tab" aria-selected="true" data-v="agents">AI agents</button>
+              <button type="button" role="tab" aria-selected="false" data-v="portal">Portal</button>
             </div>
-            <p class="serif" style="margin: 6px 0 0; font-size: 20px; line-height: 1.4; font-weight: 300; color: #363B45">“3 dormant subscriptions flagged — $140/mo in recurring savings identified.”</p>
-            <p class="mono" style="margin: 0; font-size: 11px; letter-spacing: 0.04em; color: #757981">Sample data shown to illustrate the dashboard, not real account figures.</p>
-          </div>
+            <figcaption data-agents="Supply Chain OS: 8 AI agents, each owning one part of the supply chain" data-portal="The portal home: every area of the supply chain in one place">Supply Chain OS: 8 AI agents, each owning one part of the supply chain</figcaption>
+          </figure>
         </div>
-      </div>
-    </article>
+      </article>
 
-    <!-- Case 3 -->
-    <article class="case" style="border-top: 1px solid #E1E2E5; border-bottom: 1px solid #E1E2E5">
-      <div style="max-width: 1320px; margin: 0 auto; padding: clamp(56px, 7vw, 96px) clamp(16px, 4vw, 48px); display: flex; flex-wrap: wrap; gap: 48px 80px">
-        <div style="flex: 1 1 560px; min-width: 0">
-          <div class="rv-l" style="display: flex; align-items: baseline; gap: 24px; margin-bottom: 28px">
-            <span class="ix serif" style="font-size: 64px; line-height: 1; color: #C5C7CC; font-weight: 300">03</span>
-            <span class="mono" style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #757981">Autonomous workflows · Claude Code · Supabase</span>
-          </div>
-          <h3 class="rv serif" style="margin: 0 0 24px; font-size: clamp(34px, 3.6vw, 52px); line-height: 1.05; letter-spacing: -0.015em">Autonomous multi-agent marketing engine</h3>
-          <p class="rv" style="margin: 0 0 40px; font-size: 17px; line-height: 1.7; color: #575C65; max-width: 620px">A self-executing content-intelligence pipeline of specialised agents: a research scout reads competitor positioning, a copy architect drafts targeted variants and an evaluation agent checks every output against brand guardrails before anything publishes.</p>
-          <div class="rv" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; border-top: 1px solid #DDDEE1; padding-top: 28px">
-            <div><div class="serif" style="font-size: clamp(36px, 3.4vw, 52px); line-height: 1; color: var(--accent)">4×</div><div class="mono" style="margin-top: 10px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #757981">Production velocity</div></div>
-            <div><div class="serif" style="font-size: clamp(36px, 3.4vw, 52px); line-height: 1">0</div><div class="mono" style="margin-top: 10px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #757981">Unchecked hallucinations</div></div>
-            <div><div class="serif" style="font-size: clamp(36px, 3.4vw, 52px); line-height: 1">Auto</div><div class="mono" style="margin-top: 10px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #757981">Tone validation</div></div>
-          </div>
+      <article class="feature vf reveal">
+        <div class="copy">
+          <p class="eyebrow">Personal finance app · velo-flow.io · real app screens, demo data</p>
+          <h3 class="vf-title"><img src="img/vf-icon.png" alt="" width="56" height="56">VeloFlow</h3>
+          <p class="lead">A money tracker on the web and Google Play. Connect your bank accounts and see where your money goes, in one place.</p>
+          <div class="problem"><h4>The problem it solves</h4><p>Most people can't see their whole financial picture without logging into several banks or keeping a spreadsheet up to date. So they stop tracking.</p></div>
+          <div class="did"><h4>What it does</h4><ul>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5 10 17 19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Live bank data through Plaid with <b>read-only</b> access. It never moves money or gives financial advice.</span></li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5 10 17 19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>An AI money coach answers questions about your own spending.</span></li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5 10 17 19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Android app on Google Play, paid plans through Stripe.</span></li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5 10 17 19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>A secure data feed lets the AI agency read live product numbers without any user's personal data.</span></li>
+          </ul></div>
+          <div class="stack"><span class="chip">Next.js</span><span class="chip">PostgreSQL</span><span class="chip">Plaid</span><span class="chip">Stripe</span><span class="chip">Android</span></div>
+          <div class="cta"><a class="pill blue" href="https://velo-flow.io" target="_blank" rel="noopener">Visit velo-flow.io</a></div>
         </div>
-        <div class="rv" style="flex: 1 1 380px; min-width: 0; align-self: center; display: flex; flex-direction: column">
-          <div class="mono" style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #757981; margin-bottom: 20px">Orchestration topology</div>
-          <div class="rv-l" style="display: flex; gap: 20px; padding: 20px 0; border-top: 1px solid #DDDEE1">
-            <span class="serif" style="font-size: 24px; font-weight: 300; color: var(--accent); width: 28px">1</span>
-            <div><div style="font-size: 16px; font-weight: 500">Trend &amp; competitor scout</div><div style="font-size: 14px; color: #757981; margin-top: 4px">Scrapes market deltas &amp; search intent</div></div>
-          </div>
-          <div class="rv-l" style="display: flex; gap: 20px; padding: 20px 0; border-top: 1px solid #DDDEE1">
-            <span class="serif" style="font-size: 24px; font-weight: 300; color: var(--accent); width: 28px">2</span>
-            <div><div style="font-size: 16px; font-weight: 500">Content synthesiser</div><div style="font-size: 14px; color: #757981; margin-top: 4px">Generates tailored campaign briefs</div></div>
-          </div>
-          <div class="rv-l" style="display: flex; gap: 20px; padding: 20px 0; border-top: 1px solid #DDDEE1; border-bottom: 1px solid #DDDEE1">
-            <span class="serif" style="font-size: 24px; font-weight: 300; color: var(--accent); width: 28px">3</span>
-            <div><div style="font-size: 16px; font-weight: 500">Quality &amp; safety gatekeeper</div><div style="font-size: 14px; color: #757981; margin-top: 4px">Validates compliance, tone &amp; citations</div></div>
-          </div>
+        <div class="art">
+          <div class="phone back"><div class="screen shot"><img src="img/vf-dashboard-demo.jpg" alt="VeloFlow home screen showing net worth, accounts and the Money Coach"></div></div>
+          <div class="phone"><div class="screen shot"><img src="img/vf-spend.jpg" alt="VeloFlow spending screen showing money spent, income and top spending categories"></div></div>
         </div>
-      </div>
-    </article>
-  </section>
+      </article>
 
-  <!-- CAPABILITIES -->
-  <section id="capabilities" style="max-width: 1320px; margin: 0 auto; padding: clamp(88px, 11vw, 160px) clamp(16px, 4vw, 48px)">
-    <div style="display: flex; flex-wrap: wrap; gap: 32px 80px; margin-bottom: 56px">
-      <div class="rv mono" style="flex: 0 0 200px; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent)">03 — Capabilities</div>
-      <div style="flex: 1 1 560px">
-        <h2 class="rv serif" style="margin: 0 0 36px; font-size: clamp(40px, 5.2vw, 76px); line-height: 1.02; letter-spacing: -0.02em">The <span style="font-weight: 300">toolkit</span>.</h2>
-        <div class="rv" role="group" aria-label="Filter capabilities" style="display: flex; flex-wrap: wrap; gap: 10px">
-                      <button type="button" class="chip sel" data-filter="all" aria-pressed="true">Everything</button>
-            <button type="button" class="chip" data-filter="ai" aria-pressed="false">Applied AI &amp; agents</button>
-            <button type="button" class="chip" data-filter="software" aria-pressed="false">Software &amp; architecture</button>
-            <button type="button" class="chip" data-filter="operations" aria-pressed="false">Operations &amp; supply chain</button>
+      <article class="feature pu reveal">
+        <div class="art pu-art">
+          <figure class="laptop">
+            <div class="lid"><span class="cam" aria-hidden="true"></span>
+              <div class="scr">
+                <video id="liveVid" class="view on" data-v="live" src="img/pu-live.mp4" poster="img/pu-live.jpg" autoplay muted loop playsinline aria-label="Live agents view: the agency's 11 AI agents in a ring, with each handoff animated from one agent to the next as it happens"></video>
+                <img class="view" data-v="dash" src="img/pu-dashboard.jpg" alt="The Partner Up agency dashboard: the latest handoff between agents, handoffs logged, posts awaiting approval, the fact-check gate status and the current campaign">
+              </div>
+            </div>
+            <div class="base" aria-hidden="true"><span></span></div>
+            <div class="seg" role="tablist" aria-label="Choose a dashboard view">
+              <button type="button" role="tab" aria-selected="true" data-v="live">Live agents</button>
+              <button type="button" role="tab" aria-selected="false" data-v="dash">Dashboard</button>
+            </div>
+            <figcaption id="lapCap">Every handoff between agents, animated as it happens</figcaption>
+          </figure>
+          <div class="board" id="board" aria-hidden="true">
+            <div class="bh"><b>Today's post</b><span class="live"><i></i>Live</span></div>
+            <div class="stage" data-s="Brief written"><span class="dot"><svg width="14" height="14" viewBox="0 0 24 24"><path d="M5 12.5 10 17 19 7" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/></svg></span><span>Strategy</span><span class="st">Waiting</span></div>
+            <div class="stage" data-s="Draft done"><span class="dot"><svg width="14" height="14" viewBox="0 0 24 24"><path d="M5 12.5 10 17 19 7" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/></svg></span><span>Writing</span><span class="st">Waiting</span></div>
+            <div class="stage" data-s="Fits each app"><span class="dot"><svg width="14" height="14" viewBox="0 0 24 24"><path d="M5 12.5 10 17 19 7" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/></svg></span><span>Platform fit</span><span class="st">Waiting</span></div>
+            <div class="stage" data-s="Easy to find"><span class="dot"><svg width="14" height="14" viewBox="0 0 24 24"><path d="M5 12.5 10 17 19 7" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/></svg></span><span>Search</span><span class="st">Waiting</span></div>
+            <div class="stage" data-s="No typos"><span class="dot"><svg width="14" height="14" viewBox="0 0 24 24"><path d="M5 12.5 10 17 19 7" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/></svg></span><span>Proofreading</span><span class="st">Waiting</span></div>
+            <div class="stage gate" data-s="Approved"><span class="dot"><svg width="14" height="14" viewBox="0 0 24 24"><path d="M5 12.5 10 17 19 7" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/></svg></span><span>Fact-check gate</span><span class="st">Must approve</span></div>
+            <div class="stage" data-s="Scheduled"><span class="dot"><svg width="14" height="14" viewBox="0 0 24 24"><path d="M5 12.5 10 17 19 7" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/></svg></span><span>Publishing</span><span class="st">Person taps publish</span></div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1px; background: #DDDEE1; border: 1px solid #DDDEE1">
-      <div class="skill on" data-cat="ai" style="background: #F3F3F4; padding: 32px 28px 36px; border: 1px solid transparent; display: flex; flex-direction: column; gap: 14px; min-height: 200px">
-          <span class="mono" style="font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent)">Autonomous agents</span>
-          <span class="serif" style="font-size: 28px; line-height: 1.1">Multi-agent systems</span>
-          <span style="font-size: 14px; line-height: 1.6; color: #757981; margin-top: auto">LangChain, LangGraph, custom tool-execution loops</span>
+        <div class="copy">
+          <p class="eyebrow">AI marketing agency · partnerupmarketinggroup.io</p>
+          <h3 class="vf-title"><img class="pu-logo" src="img/pu-logo.png" alt="" width="56" height="56"><span>Partner Up Marketing Agency</span></h3>
+          <p class="lead">A marketing team of 11 AI agents. Each has one job, and work moves station to station with checks along the way, like a well-run warehouse.</p>
+          <div class="problem"><h4>The problem it solves</h4><p>A small business can't afford a marketing staff that posts every day and checks its own work. Most AI tools post fast but don't check facts, costs or approvals.</p></div>
+          <div class="did"><h4>What it does</h4><ul>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5 10 17 19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Plans, writes and schedules posts across 5 social platforms every day.</span></li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5 10 17 19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Nothing goes out without a separate fact-check, and a person taps the final publish.</span></li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5 10 17 19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>A weekly spending cap on AI video, a cost log, and a record of every handoff.</span></li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5 10 17 19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Rebuilt and launched the company website with booking, a store and plans, plus a live dashboard.</span></li>
+          </ul></div>
+          <div class="stack"><span class="chip">Claude AI agents</span><span class="chip">Next.js</span><span class="chip">Supabase</span><span class="chip">Wix Headless</span><span class="chip">200+ scripts</span><span class="chip">18 test suites</span></div>
+          <div class="cta"><a class="pill blue" href="https://partnerupmarketinggroup.io" target="_blank" rel="noopener">Visit the site</a></div>
         </div>
-      
-        <div class="skill on" data-cat="ai" style="background: #F3F3F4; padding: 32px 28px 36px; border: 1px solid transparent; display: flex; flex-direction: column; gap: 14px; min-height: 200px">
-          <span class="mono" style="font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent)">LLM development</span>
-          <span class="serif" style="font-size: 28px; line-height: 1.1">Claude Code &amp; CLI</span>
-          <span style="font-size: 14px; line-height: 1.6; color: #757981; margin-top: auto">Prompt engineering, evaluation harnesses, system flows</span>
-        </div>
-      
-        <div class="skill on" data-cat="ai" style="background: #F3F3F4; padding: 32px 28px 36px; border: 1px solid transparent; display: flex; flex-direction: column; gap: 14px; min-height: 200px">
-          <span class="mono" style="font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent)">Core scripting</span>
-          <span class="serif" style="font-size: 28px; line-height: 1.1">Python &amp; automation</span>
-          <span style="font-size: 14px; line-height: 1.6; color: #757981; margin-top: auto">FastAPI, Pandas ETL, custom scraper harnesses</span>
-        </div>
-      
-        <div class="skill on" data-cat="software" style="background: #F3F3F4; padding: 32px 28px 36px; border: 1px solid transparent; display: flex; flex-direction: column; gap: 14px; min-height: 200px">
-          <span class="mono" style="font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent)">Frontend core</span>
-          <span class="serif" style="font-size: 28px; line-height: 1.1">Next.js &amp; React</span>
-          <span style="font-size: 14px; line-height: 1.6; color: #757981; margin-top: auto">App Router, Server Components, SSR, responsive UI</span>
-        </div>
-      
-        <div class="skill on" data-cat="software" style="background: #F3F3F4; padding: 32px 28px 36px; border: 1px solid transparent; display: flex; flex-direction: column; gap: 14px; min-height: 200px">
-          <span class="mono" style="font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent)">Database &amp; auth</span>
-          <span class="serif" style="font-size: 28px; line-height: 1.1">Supabase &amp; Postgres</span>
-          <span style="font-size: 14px; line-height: 1.6; color: #757981; margin-top: auto">Row-level security, realtime events, SQL tuning</span>
-        </div>
-      
-        <div class="skill on" data-cat="software" style="background: #F3F3F4; padding: 32px 28px 36px; border: 1px solid transparent; display: flex; flex-direction: column; gap: 14px; min-height: 200px">
-          <span class="mono" style="font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent)">Cloud platform</span>
-          <span class="serif" style="font-size: 28px; line-height: 1.1">Vercel &amp; edge</span>
-          <span style="font-size: 14px; line-height: 1.6; color: #757981; margin-top: auto">Serverless functions, edge routing, CI/CD</span>
-        </div>
-      
-        <div class="skill on" data-cat="software" style="background: #F3F3F4; padding: 32px 28px 36px; border: 1px solid transparent; display: flex; flex-direction: column; gap: 14px; min-height: 200px">
-          <span class="mono" style="font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent)">Financial integration</span>
-          <span class="serif" style="font-size: 28px; line-height: 1.1">Plaid API</span>
-          <span style="font-size: 14px; line-height: 1.6; color: #757981; margin-top: auto">Secure banking OAuth, live transaction streams</span>
-        </div>
-      
-        <div class="skill on" data-cat="operations" style="background: #F3F3F4; padding: 32px 28px 36px; border: 1px solid transparent; display: flex; flex-direction: column; gap: 14px; min-height: 200px">
-          <span class="mono" style="font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent)">Operations domain</span>
-          <span class="serif" style="font-size: 28px; line-height: 1.1">Supply chain &amp; ICQA</span>
-          <span style="font-size: 14px; line-height: 1.6; color: #757981; margin-top: auto">Inventory accuracy, 3PL oversight, logistics routing</span>
-        </div>
+      </article>
+
     </div>
   </section>
 
-  <!-- EXPERIENCE -->
-  <section id="experience" style="border-top: 1px solid #E1E2E5">
-    <div style="max-width: 1320px; margin: 0 auto; padding: clamp(88px, 11vw, 160px) clamp(16px, 4vw, 48px)">
-      <div style="display: flex; flex-wrap: wrap; gap: 32px 80px; margin-bottom: 64px">
-        <div class="rv mono" style="flex: 0 0 200px; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent)">04 — Experience</div>
-        <h2 class="rv serif" style="flex: 1 1 560px; margin: 0; font-size: clamp(40px, 5.2vw, 76px); line-height: 1.02; letter-spacing: -0.02em">Where enterprise logistics meets <span style="font-weight: 300">software</span>.</h2>
-      </div>
-
-      <div class="role rv" style="display: flex; flex-wrap: wrap; gap: 16px 80px; padding: 40px 0; border-top: 1px solid #DDDEE1">
-        <div class="mono" style="flex: 0 0 200px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); padding-top: 10px">Current</div>
-        <div style="flex: 1 1 560px">
-          <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px 24px; margin-bottom: 14px">
-            <h3 class="serif" style="margin: 0; font-size: clamp(28px, 2.8vw, 40px); line-height: 1.1">Senior Supply Chain Manager</h3>
-            <span style="font-size: 16px; color: #363B45">Mito Red Light</span>
+  <section id="experience" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head reveal"><h2>Experience</h2><p>Most recent first.</p></div>
+      <div class="jobs">
+        <article class="job wide reveal">
+          <p class="when">Oct 2025 – Aug 2026 · Scottsdale, AZ</p>
+          <div><h3>Senior Supply Chain Manager</h3><p class="co">Mito Red Light</p></div>
+          <div class="cols">
+            <ul>
+              <li>Ran the full supply chain while the company grew to $12.7M in revenue.</li>
+              <li>Cut out-of-stock days by up to 90%. The MITOPRO1500+ V2 went from 295 days to 29.</li>
+              <li>Turned negative inventory into 797 units on hand.</li>
+            </ul>
+            <ul>
+              <li>Built an AI supply chain portal for tracking, alerts, missing documents and order checks.</li>
+              <li>Automatic checks on 920+ orders caught zero-revenue errors.</li>
+              <li>Supplier negotiation, 3PL, freight, customs and tariffs; better trailer fill; executive reporting.</li>
+            </ul>
           </div>
-          <p style="margin: 0 0 18px; font-size: 16px; line-height: 1.7; color: #575C65; max-width: 720px">End-to-end supply-chain logistics, inventory optimisation and vendor integrations, while building custom software and AI tooling to automate tracking and visibility.</p>
-          <ul style="margin: 0; padding-left: 18px; font-size: 15px; line-height: 1.8; color: #363B45; max-width: 720px">
-            <li>Architected an internal logistics portal that cut delivery-tracking latency across nationwide fulfilment hubs.</li>
-            <li>Integrated automated tracking-agent pipelines ingesting third-party carrier status data.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="role rv" style="display: flex; flex-wrap: wrap; gap: 16px 80px; padding: 40px 0; border-top: 1px solid #DDDEE1">
-        <div class="mono" style="flex: 0 0 200px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #757981; padding-top: 10px">Operations</div>
-        <div style="flex: 1 1 560px">
-          <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px 24px; margin-bottom: 14px">
-            <h3 class="serif" style="margin: 0; font-size: clamp(28px, 2.8vw, 40px); line-height: 1.1">ICQA Operations Manager</h3>
-            <span style="font-size: 16px; color: #363B45">Target Corporation</span>
+          <div class="kpis"><span class="kpi">−90% stockout days</span><span class="kpi">797 units recovered</span><span class="kpi">920+ orders audited</span></div>
+        </article>
+        <article class="job wide reveal">
+          <p class="when">Oct 2021 – Oct 2025 · Phoenix, AZ</p>
+          <div><h3>Operations Manager</h3><p class="co">Target Distribution Center</p></div>
+          <div class="cols">
+            <ul>
+              <li>Led up to 130 associates, including 15 Level 4 ICQA and quality team members.</li>
+              <li>100% safety and inventory compliance; engagement score of 92.</li>
+              <li>Ran 4 HQ pilot programs: Packing Kaizen, Modern Load and Ship, Beauty Tail Load and Pathfinder.</li>
+            </ul>
+            <ul>
+              <li>Productivity +36%, sortation throughput +16%, receiving efficiency +10%, and +7% from Kaizen.</li>
+              <li>Built dashboards to track daily performance.</li>
+            </ul>
           </div>
-          <p style="margin: 0 0 18px; font-size: 16px; line-height: 1.7; color: #575C65; max-width: 720px">Led high-velocity inventory control and quality assurance in enterprise distribution-centre environments.</p>
-          <ul style="margin: 0; padding-left: 18px; font-size: 15px; line-height: 1.8; color: #363B45; max-width: 720px">
-            <li>Supervised multi-shift ICQA teams, sustaining high inventory-record accuracy and defect reduction.</li>
-            <li>Ran root-cause analysis on variance bottlenecks with data-analysis methods.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="role rv" style="display: flex; flex-wrap: wrap; gap: 16px 80px; padding: 40px 0; border-top: 1px solid #DDDEE1; border-bottom: 1px solid #DDDEE1">
-        <div class="mono" style="flex: 0 0 200px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #757981; padding-top: 10px">Education</div>
-        <div style="flex: 1 1 560px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px 24px">
-          <h3 class="serif" style="margin: 0; font-size: clamp(28px, 2.8vw, 40px); line-height: 1.1">Bachelor of Science</h3>
-          <span style="font-size: 16px; color: #363B45">Arizona State University · Tempe</span>
-        </div>
+          <div class="kpis"><span class="kpi">Dock accuracy 1.4% (goal 1.7%)</span><span class="kpi">Damage 0.17%</span><span class="kpi">Inbound 10.48 (goal 11.0)</span><span class="kpi">Outbound 19.63 (goal 20.0)</span></div>
+        </article>
+        <article class="job reveal">
+          <p class="when">Jan 2018 – Oct 2021 · Scottsdale, AZ</p>
+          <div><h3>Marketing and Communications Manager</h3><p class="co">Discount Tire</p></div>
+          <ul><li>Led a team of 10.</li><li>Built sales and profit forecasts.</li></ul>
+        </article>
+        <article class="job reveal">
+          <p class="when">Apr 2007 – Mar 2018 · Riverside County, CA</p>
+          <div><h3>Assistant Manager</h3><p class="co">Discount Tire</p></div>
+          <ul><li>Raised customer satisfaction 40%, to 92%.</li><li>Beat sales goals by up to 60%.</li></ul>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact" style="border-top: 1px solid #E1E2E5; background: #F0F0F2">
-    <div style="max-width: 1320px; margin: 0 auto; padding: clamp(96px, 13vw, 200px) clamp(16px, 4vw, 48px) clamp(72px, 9vw, 120px)">
-      <div class="rv mono" style="font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 40px">05 — Contact</div>
-      <h2 class="rv serif" style="margin: 0 0 56px; font-size: clamp(56px, 10vw, 160px); line-height: 0.92; letter-spacing: -0.035em">Let’s solve the <span style="font-weight: 300; color: var(--accent)">hard</span> part.</h2>
-      <p class="rv" style="margin: 0 0 56px; max-width: 620px; font-size: 19px; line-height: 1.6; color: #575C65">Hiring an applied AI engineer, solutions architect or technical operations leader? Write directly — I reply personally.</p>
-
-      <div class="rv" style="display: flex; flex-wrap: wrap; align-items: center; gap: 24px 40px; padding: 40px 0; border-top: 1px solid #D5D6DA; border-bottom: 1px solid #D5D6DA">
-        <a class="mail serif" href="mailto:Nathan.knott@yahoo.com" style="flex: 1 1 auto; font-size: clamp(32px, 5vw, 72px); line-height: 1.1; letter-spacing: -0.02em; color: #121720; padding-bottom: 6px; overflow-wrap: anywhere">Nathan.knott@yahoo.com <span class="arrow" style="font-family: inherit; font-weight: 300; font-size: 0.6em">→</span></a>
-        <button type="button" class="btn btn-ghost" id="copyBtn" style="background: transparent; border: 1px solid #C5C7CC; color: #121720; padding: 14px 24px; border-radius: 999px; font-family: 'Google Sans Code', monospace; font-size: 13px; letter-spacing: 0.06em; cursor: pointer; min-height: 48px">
-          <span id="copyLabel">Copy address</span>
-        </button>
+  <section id="skills" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head reveal"><h2>Skills</h2></div>
+      <div class="skills">
+        <div class="skill reveal"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M20 8h-3V4H3a1 1 0 0 0-1 1v11h2a3 3 0 0 0 6 0h4a3 3 0 0 0 6 0h2v-5zM7 17.5A1.5 1.5 0 1 1 7 14.5a1.5 1.5 0 0 1 0 3zm10 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM17 12V9.5h2.5l1.96 2.5z"/></svg></span><h3>Supply chain</h3><ul><li>Inventory planning</li><li>Stockout reduction</li><li>Supplier negotiation</li><li>3PL, freight, customs</li><li>Tariffs</li></ul></div>
+        <div class="skill reveal"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M4 21V9l8-6 8 6v12h-6v-7h-4v7z"/></svg></span><h3>Operations</h3><ul><li>DC inbound and outbound flow</li><li>ICQA and quality</li><li>Safety compliance</li><li>Kaizen and Lean</li><li>Pilot programs</li></ul></div>
+        <div class="skill reveal"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path fill="#202124" d="M16 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-8 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 2c-2.3 0-7 1.2-7 3.5V19h14v-2.5C15 14.2 10.3 13 8 13zm8 0c-.3 0-.6 0-1 .1 1.2.8 2 2 2 3.4V19h6v-2.5c0-2.3-4.7-3.5-7-3.5z"/></svg></span><h3>Leadership</h3><ul><li>Teams up to 130</li><li>Coaching leads</li><li>Executive reporting</li><li>Sales and profit forecasting</li><li>Customer experience</li></ul></div>
+        <div class="skill reveal"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M12 2l2.2 6.8L21 11l-6.8 2.2L12 20l-2.2-6.8L3 11l6.8-2.2z"/></svg></span><h3>AI and technical</h3><ul><li>AI agents (Claude)</li><li>Gemini API</li><li>Next.js, Supabase, PostgreSQL</li><li>Dashboards</li><li>Automated order checks</li></ul></div>
       </div>
-
-      <div class="rv mono" style="margin-top: 32px; display: flex; flex-wrap: wrap; gap: 12px 40px; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #757981">
-        <span>Mesa, Arizona</span>
-        <span>Open to remote &amp; hybrid</span>
+      <div class="cert reveal">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="9" r="6" stroke="#f9ab00" stroke-width="2"/><path d="M8.5 14 7 22l5-3 5 3-1.5-8" stroke="#f9ab00" stroke-width="2" stroke-linejoin="round"/></svg>
+        <div><b>Six Sigma Yellow Belt</b><p style="color:var(--muted)">Certification</p></div>
       </div>
     </div>
-
-    <footer style="border-top: 1px solid #E1E2E5">
-      <div class="mono" style="max-width: 1320px; margin: 0 auto; padding: 28px clamp(16px, 4vw, 48px); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; font-size: 12px; color: #90949C">
-        <span>© 2026 Nathan Knott</span>
-        <a class="navlink" href="#top">Back to top ↑</a>
-      </div>
-    </footer>
   </section>
-</div>
+
+  <section id="contact" style="padding-top:0">
+    <div class="wrap">
+      <div class="contact zoom">
+        <h2>Let's build a better-run operation.</h2>
+        <p>I'm looking for a supply chain or operations leadership role where I can keep using AI to make the work run better.</p>
+        <div class="addr">
+          <code id="email">Nathan.knott@outlook.com</code>
+          <button class="pill white" id="copy" type="button">Copy email</button>
+        </div>
+        <a class="pill outline" href="https://www.linkedin.com/in/nathan-k-30565b1b3" target="_blank" rel="noopener">LinkedIn profile</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap"><span>Nathan Knott · Gilbert, AZ</span><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a></div></footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
 <script>
-document.querySelectorAll('.chip').forEach(function(b){b.addEventListener('click',function(){
-  var f=b.dataset.filter;
-  document.querySelectorAll('.chip').forEach(function(c){var on=c===b;c.classList.toggle('sel',on);c.setAttribute('aria-pressed',on)});
-  document.querySelectorAll('.skill').forEach(function(s){var on=f==='all'||s.dataset.cat===f;s.classList.toggle('on',on);s.classList.toggle('off',!on)});
-})});
-var t,btn=document.getElementById('copyBtn'),lab=document.getElementById('copyLabel');
-btn.addEventListener('click',function(){
-  function show(msg){lab.textContent=msg;lab.className='copied';lab.style.color='var(--accent)';clearTimeout(t);t=setTimeout(function(){lab.textContent='Copy address';lab.className='';lab.style.color=''},2400)}
-  function sel(){var r=document.createRange();r.selectNodeContents(document.querySelector('.mail'));var w=getSelection();w.removeAllRanges();w.addRange(r);show('Selected \u2014 press Ctrl/\u2318+C')}
-  try{navigator.clipboard.writeText('Nathan.knott@yahoo.com').then(function(){show('Copied \u2713')},sel)}catch(e){sel()}
-});
+(function(){
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var nav=document.getElementById('nav');
+  function onScroll(){nav.classList.toggle('raised',scrollY>8);nav.classList.toggle('compact',scrollY>120)}
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  document.querySelectorAll('.pill').forEach(function(b){
+    b.addEventListener('pointerdown',function(e){
+      var r=b.getBoundingClientRect(),s=Math.max(r.width,r.height),d=document.createElement('span');
+      d.className='ripple';d.style.width=d.style.height=s+'px';
+      d.style.left=(e.clientX-r.left-s/2)+'px';d.style.top=(e.clientY-r.top-s/2)+'px';
+      b.appendChild(d);setTimeout(function(){d.remove()},650);
+    });
+  });
+
+  // active section underline
+  var links={};document.querySelectorAll('.links a').forEach(function(a){links[a.getAttribute('href').slice(1)]=a});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){for(var k in links)links[k].classList.remove('on');links[e.target.id]&&links[e.target.id].classList.add('on')}
+    })},{rootMargin:'-45% 0px -50% 0px'});
+    Object.keys(links).forEach(function(id){var el=document.getElementById(id);el&&io.observe(el)});
+  }
+
+  // carousel arrows
+  var track=document.getElementById('track'),prev=document.getElementById('prev'),next=document.getElementById('next');
+  function step(){var c=track.querySelector('.hl');return c?c.getBoundingClientRect().width+16:300}
+  function upd(){prev.disabled=track.scrollLeft<4;next.disabled=track.scrollLeft+track.clientWidth>=track.scrollWidth-4}
+  prev.onclick=function(){track.scrollBy({left:-step(),behavior:reduce?'auto':'smooth'})};
+  next.onclick=function(){track.scrollBy({left:step(),behavior:reduce?'auto':'smooth'})};
+  track.addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd);upd();
+
+  // pipeline board: work moves station to station
+  var stages=[].slice.call(document.querySelectorAll('#board .stage'));
+  function paint(n){stages.forEach(function(s,i){
+    s.classList.toggle('done',i<n);s.classList.toggle('now',i===n);
+    s.querySelector('.st').textContent=i<n?s.dataset.s:(i===n?'Working…':(s.classList.contains('gate')?'Must approve':(i===stages.length-1?'Person taps publish':'Waiting')));
+  })}
+  if(reduce){paint(stages.length)}else{
+    var n=0;paint(0);
+    setInterval(function(){n=n>=stages.length?0:n+1;paint(n)},1300);
+  }
+
+  // hero laptop: alternate between the agents and the portal
+  function macSwitch(lap,v){
+    var cur=lap.querySelector('.view.on'),nx=lap.querySelector('.view[data-v="'+v+'"]');
+    if(!nx||cur===nx)return;
+    lap.querySelectorAll('.dock i').forEach(function(d){d.classList.toggle('on',d.dataset.v===v)});
+    if(reduce||!cur){cur&&cur.classList.remove('on');nx.classList.add('on');return}
+    cur.classList.remove('on');cur.classList.add('closing');
+    var ic=lap.querySelector('.dock i[data-v="'+v+'"]');
+    setTimeout(function(){cur.classList.remove('closing');if(ic){ic.classList.remove('bounce');void ic.offsetWidth;ic.classList.add('bounce')}nx.classList.add('on')},380);
+  }
+  var hero=document.querySelector('.hero-lap');
+  if(hero&&!reduce){setInterval(function(){var c=hero.querySelector('.view.on');macSwitch(hero,c&&c.dataset.v==='agents'?'portal':'agents')},4600)}
+
+  // laptop: live agents / dashboard toggle
+  var caps={live:'Every handoff between agents, animated as it happens',dash:'The agency dashboard: handoffs, approvals and the fact-check gate'};
+  var vid=document.getElementById('liveVid');
+  if(reduce&&vid){vid.removeAttribute('autoplay');vid.pause()}
+  document.querySelectorAll('.seg button').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var v=btn.dataset.v,lap=btn.closest('.laptop'),cap=lap.querySelector('figcaption');
+      lap.querySelectorAll('.seg button').forEach(function(x){x.setAttribute('aria-selected',x===btn?'true':'false')});
+      if(lap.classList.contains('mac'))macSwitch(lap,v);else lap.querySelectorAll('.view').forEach(function(x){x.classList.toggle('on',x.dataset.v===v)});
+      cap.textContent=caps[v]||cap.getAttribute('data-'+v)||cap.textContent;
+      if(vid&&lap.contains(vid)){if(v==='live'&&!reduce){var pr=vid.play();pr&&pr.catch(function(){})}else vid.pause()}
+    });
+  });
+
+  var toast=document.getElementById('toast');
+  function show(m){toast.textContent=m;toast.classList.add('show');setTimeout(function(){toast.classList.remove('show')},2200)}
+  document.getElementById('copy').addEventListener('click',function(){
+    var t=document.getElementById('email').textContent;
+    function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('email'));var s=getSelection();s.removeAllRanges();s.addRange(r);show('Email selected. Press Ctrl+C or Cmd+C to copy.')}
+    try{navigator.clipboard.writeText(t).then(function(){show('Email copied')},sel)}catch(e){sel()}
+  });
+})();
 </script>
 </body>
 </html>
