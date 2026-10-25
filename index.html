@@ -343,9 +343,9 @@ footer .wrap span:first-child{margin-right:auto}
 .duo-leaf .back{transform:translateZ(calc(var(--t) * -1)) rotateY(180deg);border-radius:0 7% 7% 0 / 0 10% 10% 0}
 .duo img{display:block;width:100%;height:100%}
 /* the body: chrome layers with hard bright and dark reflection bands; the fold side is the dark hinge */
-.duo .slab{--c:hsl(212 9% var(--l));position:absolute;inset:0;transform:translateZ(calc(var(--t) * var(--k) / -10))}
-.duo-right .slab{background:linear-gradient(90deg,#15171b 0 4px,transparent 4px),linear-gradient(160deg,var(--c) 40%,#fff 47%,var(--c) 54%),var(--c)}
-.duo-leaf .slab{background:linear-gradient(270deg,#15171b 0 4px,transparent 4px),linear-gradient(160deg,var(--c) 40%,#fff 47%,var(--c) 54%),var(--c)}
+.duo .slab{--c:hsl(210 4% var(--l));--ant:linear-gradient(180deg,transparent 11%,#8d9196 11%,#8d9196 12.2%,transparent 12.2%,transparent 87.8%,#8d9196 87.8%,#8d9196 89%,transparent 89%);position:absolute;inset:0;transform:translateZ(calc(var(--t) * var(--k) / -8))}
+.duo-right .slab{background:linear-gradient(90deg,#15171b 0 4px,transparent 4px),var(--ant),linear-gradient(165deg,transparent 44%,rgba(255,255,255,.35) 49%,transparent 54%),var(--c)}
+.duo-leaf .slab{background:linear-gradient(270deg,#15171b 0 4px,transparent 4px),var(--ant),linear-gradient(165deg,transparent 44%,rgba(255,255,255,.35) 49%,transparent 54%),var(--c)}
 /* hinge spine: a rounded metal barrel on the fold side, visible while the device is closed or moving */
 .duo .hinge{position:absolute;left:0;top:1.5%;height:97%;width:calc(var(--t) * 2.2);transform-origin:0 50%;
   transform:translateZ(calc(var(--t) * -1.1)) rotateY(-90deg);border-radius:calc(var(--t) * 1.1);
@@ -513,8 +513,8 @@ footer .wrap span:first-child{margin-right:auto}
         <div class="art">
           <figure class="duo" id="duo">
             <div class="duo-stage" role="img" aria-label="VeloFlow on a foldable phone, opening like a book from the closed screen to the full open screen">
-              <div class="duo-right"><i class="slab r" style="--k:1;--l:99%"></i><i class="slab r" style="--k:3;--l:42%"></i><i class="slab r" style="--k:5;--l:100%"></i><i class="slab r" style="--k:7;--l:30%"></i><i class="slab r" style="--k:9;--l:97%"></i><b class="hinge"></b><div class="face"><img src="img/duo2-open-right.webp" alt=""><i class="shade"></i><i class="glare"></i><span class="rim"><i></i></span></div></div>
-              <div class="duo-leaf"><i class="slab l" style="--k:1;--l:99%"></i><i class="slab l" style="--k:3;--l:42%"></i><i class="slab l" style="--k:5;--l:100%"></i><i class="slab l" style="--k:7;--l:30%"></i><i class="slab l" style="--k:9;--l:97%"></i><div class="face front"><img src="img/duo2-open-left.webp" alt=""><i class="shade"></i><i class="glare"></i><span class="rim"><i></i></span></div>
+              <div class="duo-right"><i class="slab r" style="--k:1;--l:26%"></i><i class="slab r" style="--k:2;--l:97%"></i><i class="slab r" style="--k:3;--l:84%"></i><i class="slab r" style="--k:4;--l:12%"></i><i class="slab r" style="--k:5;--l:7%"></i><i class="slab r" style="--k:6;--l:58%"></i><i class="slab r" style="--k:7;--l:95%"></i><b class="hinge"></b><div class="face"><img src="img/duo2-open-right.webp" alt=""><i class="shade"></i><i class="glare"></i><span class="rim"><i></i></span></div></div>
+              <div class="duo-leaf"><i class="slab l" style="--k:1;--l:26%"></i><i class="slab l" style="--k:2;--l:97%"></i><i class="slab l" style="--k:3;--l:84%"></i><i class="slab l" style="--k:4;--l:12%"></i><i class="slab l" style="--k:5;--l:7%"></i><i class="slab l" style="--k:6;--l:58%"></i><i class="slab l" style="--k:7;--l:95%"></i><div class="face front"><img src="img/duo2-open-left.webp" alt=""><i class="shade"></i><i class="glare"></i><span class="rim"><i></i></span></div>
                 <div class="face back"><img src="img/duo2-closed.webp" alt=""><i class="shade"></i><span class="rim"><i></i></span></div>
               </div>
               <img class="duo-full" src="img/duo2-open.webp" alt=""><span class="duo-rim rim"><i></i></span>
