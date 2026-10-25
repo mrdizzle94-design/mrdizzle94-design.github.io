@@ -316,7 +316,7 @@ footer .wrap span:first-child{margin-right:auto}
    stacked rounded layers in titanium tones down to the back, so the rails follow the rounded corners from any
    angle. The halves fold face to face on a rounded metal hinge spine; light falls off as a half turns away,
    a glass glare sweeps on opening, and the open device rests as one seamless image. */
-.duo{--t:clamp(7px,1.9vw,12px);--dur:1.8s;--ease:cubic-bezier(.62,0,.22,1);margin:0;width:min(580px,100%);display:grid;justify-items:center;gap:22px;perspective:1500px;perspective-origin:50% 35%;cursor:pointer;position:relative}
+.duo{--t:clamp(8px,2.2vw,14px);--dur:1.8s;--ease:cubic-bezier(.62,0,.22,1);margin:0;width:min(580px,100%);display:grid;justify-items:center;gap:22px;perspective:1500px;perspective-origin:50% 35%;cursor:pointer;position:relative}
 .duo::after{content:"";position:absolute;left:8%;right:10%;top:86%;height:10%;border-radius:50%;background:radial-gradient(closest-side,rgba(20,24,40,.42),rgba(20,24,40,0));z-index:-1;transition:left var(--dur) var(--ease),right var(--dur) var(--ease)}
 .duo:not(.open)::after{left:42%;right:6%}
 .duo-stage{position:relative;width:100%;aspect-ratio:1813/1270;transform-style:preserve-3d;transform:rotateX(8deg) rotateY(-12deg);transition:transform var(--dur) var(--ease)}
@@ -331,14 +331,14 @@ footer .wrap span:first-child{margin-right:auto}
 .duo-leaf .back{transform:translateZ(calc(var(--t) * -1)) rotateY(180deg);border-radius:0 7% 7% 0 / 0 10% 10% 0}
 .duo img{display:block;width:100%;height:100%}
 /* the body: stacked layers between screen and back; light rim near each face, darker band in the middle like a titanium rail */
-.duo .slab{--c:hsl(36 6% calc(86% - 26% * (1 - (var(--k) - 5) * (var(--k) - 5) / 25)));position:absolute;inset:0;transform:translateZ(calc(var(--t) * var(--k) / -10));background:var(--c)}
+.duo .slab{--c:hsl(213 7% var(--l));position:absolute;inset:0;transform:translateZ(calc(var(--t) * var(--k) / -10));background:var(--c)}
 /* the fold side of each half is the dark hinge, not titanium */
 .duo-right .slab{background:linear-gradient(90deg,#15171b 0 4px,var(--c) 4px)}
 .duo-leaf .slab{background:linear-gradient(270deg,#15171b 0 4px,var(--c) 4px)}
 /* hinge spine: a rounded metal barrel on the fold side, visible while the device is closed or moving */
 .duo .hinge{position:absolute;left:0;top:1.5%;height:97%;width:calc(var(--t) * 2.2);transform-origin:0 50%;
   transform:translateZ(calc(var(--t) * -1.1)) rotateY(-90deg);border-radius:calc(var(--t) * 1.1);
-  background:linear-gradient(90deg,#77736d,#d9d5ce 22%,#fbfaf7 40%,#c9c5be 60%,#8a867f 82%,#5f5b56);transition:opacity .3s;transition-delay:calc(var(--dur) * .4)}
+  background:linear-gradient(90deg,#8a9097,#dfe3e8 20%,#ffffff 38%,#c4c9cf 58%,#9aa0a7 78%,#6c7279);transition:opacity .3s;transition-delay:calc(var(--dur) * .4)}
 .duo.open .hinge{opacity:0;transition:opacity .35s;transition-delay:calc(var(--dur) * .3)}
 /* light falloff: a half facing away from the viewer goes dark */
 .duo .shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.85),rgba(0,0,0,.45));opacity:0;transition:opacity var(--dur) var(--ease)}
@@ -352,7 +352,13 @@ footer .wrap span:first-child{margin-right:auto}
 /* at rest the open device is one seamless image; the two halves only carry the motion */
 .duo .duo-full{position:absolute;inset:0;transform:translateZ(1.5px);opacity:0;transition:opacity .25s}
 .duo.open .duo-full{opacity:1;transition-delay:calc(var(--dur) - .1s)}
-@media (prefers-reduced-motion:reduce){.duo-stage,.duo-leaf,.duo::after,.duo .shade,.duo .glare,.duo .hinge,.duo .duo-full{transition:none}}
+/* polished silver rim around the glass, on every outer edge (not the fold side) */
+.duo .face::after,.duo .duo-rim{content:"";position:absolute;inset:0;border-radius:inherit;border:2px solid #dfe3e8;box-shadow:inset 0 0 0 1px rgba(0,0,0,.45),0 0 0 .5px #9aa0a7;pointer-events:none}
+.duo-right .face::after,.duo-leaf .back::after{border-left:0}
+.duo-leaf .front::after{border-right:0}
+.duo .duo-rim{border-radius:3.5% / 10%;transform:translateZ(1.6px);opacity:0;transition:opacity .25s}
+.duo.open .duo-rim{opacity:1;transition-delay:calc(var(--dur) - .1s)}
+@media (prefers-reduced-motion:reduce){.duo-stage,.duo-leaf,.duo::after,.duo .shade,.duo .glare,.duo .hinge,.duo .duo-full,.duo .duo-rim{transition:none}}
 .duo figcaption{font:500 14px var(--font);color:var(--muted)}
 @media (prefers-reduced-motion:reduce){.duo-stage,.duo-leaf,.duo::after,.duo .shade,.duo .glare{transition:none}}
 </style>
@@ -491,11 +497,11 @@ footer .wrap span:first-child{margin-right:auto}
         <div class="art">
           <figure class="duo" id="duo">
             <div class="duo-stage" role="img" aria-label="VeloFlow on a foldable phone, opening like a book from the closed screen to the full open screen">
-              <div class="duo-right"><i class="slab r" style="--k:1"></i><i class="slab r" style="--k:2"></i><i class="slab r" style="--k:3"></i><i class="slab r" style="--k:4"></i><i class="slab r" style="--k:5"></i><i class="slab r" style="--k:6"></i><i class="slab r" style="--k:7"></i><i class="slab r" style="--k:8"></i><i class="slab r" style="--k:9"></i><b class="hinge"></b><div class="face"><img src="img/duo-open-right.webp" alt=""><i class="shade"></i><i class="glare"></i></div></div>
-              <div class="duo-leaf"><i class="slab l" style="--k:1"></i><i class="slab l" style="--k:2"></i><i class="slab l" style="--k:3"></i><i class="slab l" style="--k:4"></i><i class="slab l" style="--k:5"></i><i class="slab l" style="--k:6"></i><i class="slab l" style="--k:7"></i><i class="slab l" style="--k:8"></i><i class="slab l" style="--k:9"></i><div class="face front"><img src="img/duo-open-left.webp" alt=""><i class="shade"></i><i class="glare"></i></div>
+              <div class="duo-right"><i class="slab r" style="--k:1;--l:94%"></i><i class="slab r" style="--k:2;--l:98%"></i><i class="slab r" style="--k:3;--l:90%"></i><i class="slab r" style="--k:4;--l:76%"></i><i class="slab r" style="--k:5;--l:68%"></i><i class="slab r" style="--k:6;--l:74%"></i><i class="slab r" style="--k:7;--l:86%"></i><i class="slab r" style="--k:8;--l:95%"></i><i class="slab r" style="--k:9;--l:82%"></i><b class="hinge"></b><div class="face"><img src="img/duo-open-right.webp" alt=""><i class="shade"></i><i class="glare"></i></div></div>
+              <div class="duo-leaf"><i class="slab l" style="--k:1;--l:94%"></i><i class="slab l" style="--k:2;--l:98%"></i><i class="slab l" style="--k:3;--l:90%"></i><i class="slab l" style="--k:4;--l:76%"></i><i class="slab l" style="--k:5;--l:68%"></i><i class="slab l" style="--k:6;--l:74%"></i><i class="slab l" style="--k:7;--l:86%"></i><i class="slab l" style="--k:8;--l:95%"></i><i class="slab l" style="--k:9;--l:82%"></i><div class="face front"><img src="img/duo-open-left.webp" alt=""><i class="shade"></i><i class="glare"></i></div>
                 <div class="face back"><img src="img/duo-closed.webp" alt=""><i class="shade"></i></div>
               </div>
-              <img class="duo-full" src="img/duo-open.webp" alt="">
+              <img class="duo-full" src="img/duo-open.webp" alt=""><i class="duo-rim"></i>
             </div>
             <figcaption>Real VeloFlow screens, folded and open</figcaption>
           </figure>
