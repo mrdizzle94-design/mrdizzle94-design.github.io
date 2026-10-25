@@ -311,6 +311,40 @@ footer .wrap span:first-child{margin-right:auto}
 .ic-portal{background:linear-gradient(90deg,#e11d48 0 62%,#3a3a3e 62%) center 40%/70% 14% no-repeat,linear-gradient(#1f1f22,#1f1f22) center 68%/70% 16% no-repeat,#0b0b0c}
 @keyframes dockbounce{35%{transform:translateY(-45%)}70%{transform:translateY(0)}85%{transform:translateY(-12%)}}
 @media (prefers-reduced-motion:reduce){.mac .view{transition:none}}
+
+/* VeloFlow foldable, modelled as a real device: two 6px-thick halves that fold face to face around a hinge,
+   with metal edges, light falloff as each half turns away, a glass glare that sweeps on opening and a moving contact shadow */
+.duo{--t:6px;--dur:1.7s;--ease:cubic-bezier(.62,0,.22,1);margin:0;width:min(580px,100%);display:grid;justify-items:center;gap:18px;perspective:1500px;perspective-origin:50% 35%;cursor:pointer;position:relative}
+.duo::after{content:"";position:absolute;left:8%;right:10%;top:84%;height:10%;border-radius:50%;background:radial-gradient(closest-side,rgba(20,24,40,.42),rgba(20,24,40,0));z-index:-1;transition:left var(--dur) var(--ease),right var(--dur) var(--ease),opacity var(--dur)}
+.duo:not(.open)::after{left:44%;right:8%;opacity:.9}
+.duo-stage{position:relative;width:100%;aspect-ratio:1813/1270;transform-style:preserve-3d;transform:rotateX(7deg) rotateY(-9deg);transition:transform var(--dur) var(--ease)}
+.duo:not(.open) .duo-stage{transform:translateX(-24%) rotateX(7deg) rotateY(-26deg)}
+.duo-right,.duo-leaf{position:absolute;top:0;height:100%;transform-style:preserve-3d}
+.duo-right{right:0;width:50.03%}
+.duo-leaf{left:0;width:49.97%;transform-origin:100% 50% calc(var(--t) / 2);transition:transform var(--dur) var(--ease)}
+.duo:not(.open) .duo-leaf{transform:rotateY(180deg)}
+.duo .face{position:absolute;inset:0;overflow:hidden;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:7% / 10%}
+.duo-right .face{border-radius:0 7% 7% 0 / 0 10% 10% 0}
+.duo-leaf .front{border-radius:7% 0 0 7% / 10% 0 0 10%}
+.duo-leaf .back{transform:translateZ(calc(var(--t) * -1)) rotateY(180deg);border-radius:0 7% 7% 0 / 0 10% 10% 0}
+.duo img{display:block;width:100%;height:100%}
+/* light falloff: a half facing away from the viewer goes dark */
+.duo .shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.85),rgba(0,0,0,.45));opacity:0;transition:opacity var(--dur) var(--ease)}
+.duo:not(.open) .front .shade{opacity:1}
+.duo:not(.open) .duo-right .shade{opacity:1;transition-delay:0s}
+.duo-right .shade{background:rgba(5,7,12,.92);transition-delay:.25s}
+.duo.open .back .shade{opacity:1}
+/* glass glare sweeps across as it opens */
+.duo .glare{position:absolute;inset:0;background:linear-gradient(112deg,transparent 30%,rgba(255,255,255,.16) 46%,rgba(255,255,255,.04) 54%,transparent 64%) no-repeat;background-size:300% 100%;background-position:100% 0;transition:background-position calc(var(--dur) * 1.2) var(--ease);pointer-events:none}
+.duo.open .glare{background-position:0 0}
+/* metal side edges, visible while the device turns */
+.duo .edge{position:absolute;top:5%;height:90%;width:var(--t);background:linear-gradient(180deg,#3a3d42,#c9ccd1 18%,#eef0f2 50%,#b9bcc1 82%,#3a3d42);border-radius:3px}
+.duo-right .edge{right:0;transform-origin:100% 50%;transform:rotateY(90deg)}
+.duo-leaf .edge{left:0;transform-origin:0 50%;transform:rotateY(-90deg)}
+/* hinge spine: dark hardware that shows through the fold while it moves */
+.duo .spine{position:absolute;left:calc(var(--t) * -1.2);top:2%;width:calc(var(--t) * 2.4);height:96%;border-radius:var(--t);background:linear-gradient(90deg,#0d0f13,#2a2d33 50%,#0d0f13);transform:translateZ(calc(var(--t) * -0.6))}
+.duo figcaption{font:500 14px var(--font);color:var(--muted)}
+@media (prefers-reduced-motion:reduce){.duo-stage,.duo-leaf,.duo::after,.duo .shade,.duo .glare{transition:none}}
 </style>
 </head>
 <body>
@@ -445,8 +479,17 @@ footer .wrap span:first-child{margin-right:auto}
           <div class="cta"><a class="pill blue" href="https://velo-flow.io" target="_blank" rel="noopener">Visit velo-flow.io</a></div>
         </div>
         <div class="art">
-          <div class="phone back"><div class="screen shot"><img src="img/vf-dashboard-demo.jpg" alt="VeloFlow home screen showing net worth, accounts and the Money Coach"></div></div>
-          <div class="phone"><div class="screen shot"><img src="img/vf-spend.jpg" alt="VeloFlow spending screen showing money spent, income and top spending categories"></div></div>
+          <figure class="duo" id="duo">
+            <div class="duo-stage" role="img" aria-label="VeloFlow on a foldable phone, opening like a book from the closed screen to the full open screen">
+              <div class="duo-right"><b class="spine"></b><div class="face"><img src="img/duo-open-right.webp" alt=""><i class="shade"></i><i class="glare"></i></div><b class="edge"></b></div>
+              <div class="duo-leaf">
+                <div class="face front"><img src="img/duo-open-left.webp" alt=""><i class="shade"></i><i class="glare"></i></div>
+                <div class="face back"><img src="img/duo-closed.webp" alt=""><i class="shade"></i></div>
+                <b class="edge"></b>
+              </div>
+            </div>
+            <figcaption>Real VeloFlow screens, folded and open</figcaption>
+          </figure>
         </div>
       </article>
 
@@ -637,6 +680,22 @@ footer .wrap span:first-child{margin-right:auto}
   }
   var hero=document.querySelector('.hero-lap');
   if(hero&&!reduce){setInterval(function(){var c=hero.querySelector('.view.on');macSwitch(hero,c&&c.dataset.v==='agents'?'portal':'agents')},4600)}
+
+  // VeloFlow foldable: open like a book when it scrolls into view, then close and reopen every few seconds; tap to toggle
+  var duo=document.getElementById('duo');
+  if(duo){
+    if(reduce){duo.classList.add('open')}
+    else{
+      var dloop=null,dseen=false;
+      function dcycle(){duo.classList.remove('open');setTimeout(function(){duo.classList.add('open')},1900)}
+      var dio=('IntersectionObserver' in window)?new IntersectionObserver(function(es){es.forEach(function(e){
+        if(e.isIntersecting){if(!dseen){dseen=true;setTimeout(function(){duo.classList.add('open')},500)}if(!dloop)dloop=setInterval(dcycle,7500)}
+        else if(dloop){clearInterval(dloop);dloop=null}
+      })},{threshold:.4}):null;
+      if(dio)dio.observe(duo);else duo.classList.add('open');
+      duo.addEventListener('click',function(){duo.classList.toggle('open')});
+    }
+  }
 
   // laptop: live agents / dashboard toggle
   var caps={live:'Every handoff between agents, animated as it happens',dash:'The agency dashboard: handoffs, approvals and the fact-check gate'};
