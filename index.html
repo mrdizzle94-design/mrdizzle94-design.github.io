@@ -344,8 +344,8 @@ footer .wrap span:first-child{margin-right:auto}
 .duo img{display:block;width:100%;height:100%}
 /* the body: chrome layers with hard bright and dark reflection bands; the fold side is the dark hinge */
 .duo .slab{--c:hsl(210 4% var(--l));--ant:linear-gradient(180deg,transparent 11%,#8d9196 11%,#8d9196 12.2%,transparent 12.2%,transparent 87.8%,#8d9196 87.8%,#8d9196 89%,transparent 89%);position:absolute;inset:0;transform:translateZ(calc(var(--t) * var(--k) / -8))}
-.duo-right .slab{background:linear-gradient(90deg,#15171b 0 4px,transparent 4px),var(--ant),linear-gradient(165deg,transparent 44%,rgba(255,255,255,.35) 49%,transparent 54%),var(--c)}
-.duo-leaf .slab{background:linear-gradient(270deg,#15171b 0 4px,transparent 4px),var(--ant),linear-gradient(165deg,transparent 44%,rgba(255,255,255,.35) 49%,transparent 54%),var(--c)}
+.duo-right .slab{background:linear-gradient(90deg,#15171b 0 4px,transparent 4px),var(--ant),var(--c)}
+.duo-leaf .slab{background:linear-gradient(270deg,#15171b 0 4px,transparent 4px),var(--ant),var(--c)}
 /* hinge spine: a rounded metal barrel on the fold side, visible while the device is closed or moving */
 .duo .hinge{position:absolute;left:0;top:1.5%;height:97%;width:calc(var(--t) * 2.2);transform-origin:0 50%;
   transform:translateZ(calc(var(--t) * -1.1)) rotateY(-90deg);border-radius:calc(var(--t) * 1.1);
@@ -368,13 +368,11 @@ footer .wrap span:first-child{margin-right:auto}
 .duo .rim{position:absolute;inset:0;border-radius:inherit;padding:clamp(3px,.8vw,5px);pointer-events:none;overflow:hidden;
   background:linear-gradient(115deg,#ffffff 0%,#c9ced4 7%,#5d636a 14%,#f4f6f8 21%,#ffffff 25%,#8b9197 33%,#2f343a 41%,#d6dadf 49%,#ffffff 53%,#9ea4ab 61%,#454b52 70%,#e9ecef 79%,#ffffff 84%,#7c8289 92%,#cfd3d8 100%);
   -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude}
-.duo .rim i{position:absolute;top:-60%;left:0;width:45%;height:220%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.95) 45%,#fff 50%,rgba(255,255,255,.95) 55%,transparent);transform:translateX(-120%) rotate(18deg);animation:rimglint 5s cubic-bezier(.45,0,.55,1) infinite;will-change:transform}
-@keyframes rimglint{0%{transform:translateX(-120%) rotate(18deg)}55%,100%{transform:translateX(320%) rotate(18deg)}}
 .duo-right .face .rim,.duo-leaf .back .rim{padding-left:0}
 .duo-leaf .front .rim{padding-right:0}
 .duo .duo-rim{border-radius:3.5% / 10%;transform:translateZ(1.6px);opacity:0;transition:opacity .3s}
 .duo.open .duo-rim{opacity:1;transition-delay:calc(var(--dur) - .05s)}
-@media (prefers-reduced-motion:reduce){.duo-stage,.duo::after,.duo .shade,.duo .glare,.duo .hinge,.duo .duo-full,.duo .duo-rim{transition:none}.duo .duo-leaf,.duo .rim i{animation:none!important}}
+@media (prefers-reduced-motion:reduce){.duo-stage,.duo::after,.duo .shade,.duo .glare,.duo .hinge,.duo .duo-full,.duo .duo-rim{transition:none}.duo .duo-leaf{animation:none!important}}
 .duo figcaption{font:500 14px var(--font);color:var(--muted)}
 @media (prefers-reduced-motion:reduce){.duo-stage,.duo-leaf,.duo::after,.duo .shade,.duo .glare{transition:none}}
 </style>
@@ -513,11 +511,11 @@ footer .wrap span:first-child{margin-right:auto}
         <div class="art">
           <figure class="duo" id="duo">
             <div class="duo-stage" role="img" aria-label="VeloFlow on a foldable phone, opening like a book from the closed screen to the full open screen">
-              <div class="duo-right"><i class="slab r" style="--k:1;--l:26%"></i><i class="slab r" style="--k:2;--l:97%"></i><i class="slab r" style="--k:3;--l:84%"></i><i class="slab r" style="--k:4;--l:12%"></i><i class="slab r" style="--k:5;--l:7%"></i><i class="slab r" style="--k:6;--l:58%"></i><i class="slab r" style="--k:7;--l:95%"></i><b class="hinge"></b><div class="face"><img src="img/duo2-open-right.webp" alt=""><i class="shade"></i><i class="glare"></i><span class="rim"><i></i></span></div></div>
-              <div class="duo-leaf"><i class="slab l" style="--k:1;--l:26%"></i><i class="slab l" style="--k:2;--l:97%"></i><i class="slab l" style="--k:3;--l:84%"></i><i class="slab l" style="--k:4;--l:12%"></i><i class="slab l" style="--k:5;--l:7%"></i><i class="slab l" style="--k:6;--l:58%"></i><i class="slab l" style="--k:7;--l:95%"></i><div class="face front"><img src="img/duo2-open-left.webp" alt=""><i class="shade"></i><i class="glare"></i><span class="rim"><i></i></span></div>
-                <div class="face back"><img src="img/duo2-closed.webp" alt=""><i class="shade"></i><span class="rim"><i></i></span></div>
+              <div class="duo-right"><i class="slab r" style="--k:1;--l:26%"></i><i class="slab r" style="--k:2;--l:97%"></i><i class="slab r" style="--k:3;--l:84%"></i><i class="slab r" style="--k:4;--l:12%"></i><i class="slab r" style="--k:5;--l:7%"></i><i class="slab r" style="--k:6;--l:58%"></i><i class="slab r" style="--k:7;--l:95%"></i><b class="hinge"></b><div class="face"><img src="img/duo2-open-right.webp" alt=""><i class="shade"></i><i class="glare"></i><span class="rim"></span></div></div>
+              <div class="duo-leaf"><i class="slab l" style="--k:1;--l:26%"></i><i class="slab l" style="--k:2;--l:97%"></i><i class="slab l" style="--k:3;--l:84%"></i><i class="slab l" style="--k:4;--l:12%"></i><i class="slab l" style="--k:5;--l:7%"></i><i class="slab l" style="--k:6;--l:58%"></i><i class="slab l" style="--k:7;--l:95%"></i><div class="face front"><img src="img/duo2-open-left.webp" alt=""><i class="shade"></i><i class="glare"></i><span class="rim"></span></div>
+                <div class="face back"><img src="img/duo2-closed.webp" alt=""><i class="shade"></i><span class="rim"></span></div>
               </div>
-              <img class="duo-full" src="img/duo2-open.webp" alt=""><span class="duo-rim rim"><i></i></span>
+              <img class="duo-full" src="img/duo2-open.webp" alt=""><span class="duo-rim rim"></span>
             </div>
             <figcaption>Real VeloFlow screens, folded and open</figcaption>
           </figure>
