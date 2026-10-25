@@ -338,7 +338,7 @@ footer .wrap span:first-child{margin-right:auto}
 /* hinge spine: a rounded metal barrel on the fold side, visible while the device is closed or moving */
 .duo .hinge{position:absolute;left:0;top:1.5%;height:97%;width:calc(var(--t) * 2.2);transform-origin:0 50%;
   transform:translateZ(calc(var(--t) * -1.1)) rotateY(-90deg);border-radius:calc(var(--t) * 1.1);
-  background:linear-gradient(90deg,#77736d,#d9d5ce 22%,#fbfaf7 40%,#c9c5be 60%,#8a867f 82%,#5f5b56);transition:opacity .25s}
+  background:linear-gradient(90deg,#77736d,#d9d5ce 22%,#fbfaf7 40%,#c9c5be 60%,#8a867f 82%,#5f5b56);transition:opacity .3s;transition-delay:calc(var(--dur) * .4)}
 .duo.open .hinge{opacity:0;transition:opacity .35s;transition-delay:calc(var(--dur) * .3)}
 /* light falloff: a half facing away from the viewer goes dark */
 .duo .shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.85),rgba(0,0,0,.45));opacity:0;transition:opacity var(--dur) var(--ease)}
